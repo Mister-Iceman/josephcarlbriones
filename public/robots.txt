@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Disallow: /recruiter-access
+
+Sitemap: https://josephcarlbriones.com/sitemap.xml

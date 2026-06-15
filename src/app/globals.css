@@ -1,26 +1,286 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-inter);
   --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-inter);
+
+  /* JCB Custom Colors */
+  --color-navy-950: #050812;
+  --color-navy-900: #0A0F1E;
+  --color-navy-800: #0F1629;
+  --color-navy-700: #162040;
+  --color-jblue-500: #4F8EF7;
+  --color-jblue-400: #7AAFF9;
+  --color-jblue-300: #A5CCFB;
+  --color-jblue-100: #E8F2FE;
+  --color-cream-100: #F5F5F3;
+  --color-cream-200: #E8E8E5;
+  --color-cream-300: #C8C8C4;
+  --color-gold-500: #F7B84F;
+  --color-gold-400: #F9CC79;
+
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  --bg-primary: #0A0F1E;
+  --bg-card: rgba(255,255,255,0.04);
+  --bg-card-hover: rgba(255,255,255,0.07);
+  --border-subtle: rgba(255,255,255,0.08);
+  --border-hover: rgba(79,142,247,0.4);
+  --text-primary: #F5F5F3;
+  --text-muted: rgba(245,245,243,0.55);
+  --text-subtle: rgba(245,245,243,0.35);
+  --jcb-accent: #4F8EF7;
+  --jcb-gold: #F7B84F;
+
+  --background: #0A0F1E;
+  --foreground: #F5F5F3;
+  --card: rgba(255,255,255,0.04);
+  --card-foreground: #F5F5F3;
+  --popover: #0F1629;
+  --popover-foreground: #F5F5F3;
+  --primary: #4F8EF7;
+  --primary-foreground: #ffffff;
+  --secondary: rgba(255,255,255,0.06);
+  --secondary-foreground: #F5F5F3;
+  --muted: rgba(255,255,255,0.06);
+  --muted-foreground: rgba(245,245,243,0.55);
+  --accent: rgba(79,142,247,0.1);
+  --accent-foreground: #4F8EF7;
+  --destructive: #ef4444;
+  --border: rgba(255,255,255,0.08);
+  --input: rgba(255,255,255,0.1);
+  --ring: #4F8EF7;
+  --radius: 0.625rem;
+  --sidebar: #0F1629;
+  --sidebar-foreground: #F5F5F3;
+  --sidebar-primary: #4F8EF7;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: rgba(79,142,247,0.1);
+  --sidebar-accent-foreground: #4F8EF7;
+  --sidebar-border: rgba(255,255,255,0.08);
+  --sidebar-ring: #4F8EF7;
+  --chart-1: #4F8EF7;
+  --chart-2: #7AAFF9;
+  --chart-3: #A5CCFB;
+  --chart-4: #F7B84F;
+  --chart-5: #F9CC79;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    box-sizing: border-box;
+  }
+  body {
+    background-color: #0A0F1E;
+    color: #F5F5F3;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  html {
+    scroll-behavior: smooth;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* JCB Typography Scale */
+.display-xl {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
 }
+.display-lg {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+}
+.display-md {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+.eyebrow {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.body-lg {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+}
+.body-sm {
+  font-size: 0.875rem;
+  line-height: 1.65;
+}
+
+/* JCB Card */
+.jcb-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+.jcb-card:hover {
+  border-color: var(--border-hover);
+  background: var(--bg-card-hover);
+}
+
+/* Responsive grid utilities */
+@media (max-width: 900px) {
+  .work-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .ventures-grid { grid-template-columns: 1fr !important; }
+}
+@media (max-width: 640px) {
+  .work-grid { grid-template-columns: 1fr !important; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .stats-row { grid-template-columns: repeat(2, 1fr) !important; }
+  .competency-grid { grid-template-columns: 1fr !important; }
+  .highlights-grid { grid-template-columns: 1fr !important; }
+  .timeline-row { grid-template-columns: 1fr !important; }
+  .timeline-date { text-align: left !important; }
+  .form-row { grid-template-columns: 1fr !important; }
+  .venture-row { grid-template-columns: 1fr !important; gap: 40px !important; }
+}
+
+/* Hover utilities for Server Components */
+.btn-primary {
+  background-color: #4F8EF7;
+  color: #ffffff;
+  border: none;
+  border-radius: 9999px;
+  padding: 12px 28px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.btn-primary:hover { opacity: 0.85; }
+
+.btn-outline {
+  background-color: transparent;
+  color: rgba(245,245,243,0.8);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 9999px;
+  padding: 12px 28px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+.btn-outline:hover { border-color: rgba(255,255,255,0.45); }
+
+.btn-ghost {
+  background-color: transparent;
+  color: rgba(245,245,243,0.6);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 9999px;
+  padding: 10px 20px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+.btn-ghost:hover { border-color: rgba(255,255,255,0.3); color: rgba(245,245,243,0.9); }
+
+.link-accent {
+  color: rgba(245,245,243,0.6);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(245,245,243,0.2);
+  padding-bottom: 2px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.link-accent:hover { color: #F5F5F3; border-bottom-color: rgba(245,245,243,0.5); }
+
+.link-blue { color: #4F8EF7; text-decoration: none; transition: opacity 0.2s ease; }
+.link-blue:hover { opacity: 0.8; }
+
+.logo-text {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: rgba(245,245,243,0.3);
+  letter-spacing: 0.01em;
+  transition: color 0.2s ease;
+  cursor: default;
+  white-space: nowrap;
+}
+.logo-text:hover { color: rgba(245,245,243,0.85); }
+
+.footer-link {
+  font-size: 0.8125rem;
+  color: rgba(245,245,243,0.5);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.footer-link:hover { color: #4F8EF7; }
+
+.footer-icon {
+  color: rgba(245,245,243,0.4);
+  transition: color 0.2s ease;
+}
+.footer-icon:hover { color: #4F8EF7; }
+
+.nav-link {
+  padding: 6px 14px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgba(245,245,243,0.7);
+  text-decoration: none;
+  border-radius: 6px;
+  transition: color 0.2s ease;
+}
+.nav-link:hover { color: #F5F5F3; }
+.nav-link.active { color: #4F8EF7; }
+
+.jcb-card-link { text-decoration: none; display: block; height: 100%; }

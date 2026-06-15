@@ -1,0 +1,368 @@
+import type { Metadata } from 'next'
+import { CheckCircle2 } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: 'About',
+  description:
+    'Joseph Carl Briones \u2014 20+ years in marketing, broadcast media, advertising, and digital platform development. Los Angeles-based. Bilingual English/Tagalog.',
+}
+
+const timeline = [
+  {
+    period: 'June 2024 \u2013 Present',
+    role: 'Freelance Marketing & Technology Consultant',
+    org: 'Founder \u2014 FilipinoFoodNearMe.org & FilipinoEventsNearMe.org',
+    location: 'Los Angeles, CA',
+    notes: null,
+  },
+  {
+    period: 'Oct 2019 \u2013 May 2023',
+    role: 'Founder | Principal Partner',
+    org: 'JCB Strategic Media LLC',
+    location: 'Los Angeles, CA',
+    notes: null,
+  },
+  {
+    period: '2021',
+    role: 'Account Director',
+    org: 'Westates Marketing & Automotive Promotions',
+    location: 'Los Angeles, CA',
+    notes: null,
+  },
+  {
+    period: 'August 2020 \u2013 October 2020',
+    role: 'Enumerator',
+    org: 'U.S. Census Bureau',
+    location: 'Los Angeles, CA',
+    notes: null,
+  },
+  {
+    period: 'May 2009 \u2013 September 2019',
+    role: 'Account Executive, Advertising Sales',
+    org: 'ABS-CBN International / The Filipino Channel (TFC)',
+    location: 'Greater Los Angeles Area',
+    notes: '10 years, 5 months',
+  },
+  {
+    period: '2008',
+    role: 'Senior Planner',
+    org: 'Universal McCann, Los Angeles',
+    location: 'Greater Los Angeles Area',
+    notes:
+      'Clients: Sony Pictures Entertainment \u2014 The House Bunny, Underworld: Rise of the Lycans, Seven Pounds, Pink Panther 2, Lakeview Terrace, Mardi Gras, The International',
+  },
+]
+
+const competencies = [
+  'Community-Facing Communication',
+  'Multilingual Outreach (English / Tagalog)',
+  'Documentation & Reporting',
+  'Stakeholder Coordination',
+  'Federal Protocol Compliance (Title 13)',
+  'Digital Platform Development',
+  'Project Management & Execution',
+  'Multicultural Audience Strategy',
+]
+
+const skills = [
+  'Marketing Strategy',
+  'Advertising & Media Sales',
+  'Campaign Management',
+  'Digital Platform Development',
+  'Project Coordination',
+  'Multicultural Market Expertise',
+  'AI-Assisted Workflows',
+  'IT Support (Google Certified)',
+  'Basic Python / Web Development',
+  'Bilingual: English / Tagalog',
+]
+
+export default function AboutPage() {
+  return (
+    <div style={{ backgroundColor: '#0A0F1E', minHeight: '100vh' }}>
+      {/* Hero */}
+      <section style={{ padding: '80px 24px 60px', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
+        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+          <p className="eyebrow" style={{ color: '#4F8EF7', marginBottom: '16px' }}>
+            About
+          </p>
+          <h1 className="display-lg" style={{ color: '#F5F5F3', margin: '0 0 12px' }}>
+            Joseph Carl Briones
+          </h1>
+          <p
+            style={{
+              fontSize: '1rem',
+              color: 'rgba(245,245,243,0.45)',
+              margin: '0 0 32px',
+              letterSpacing: '0.01em',
+            }}
+          >
+            Marketing Strategist &nbsp;&middot;&nbsp; Community Platform Builder &nbsp;&middot;&nbsp; Multicultural Media Professional &nbsp;&middot;&nbsp; Los Angeles, CA
+          </p>
+          <p className="body-lg" style={{ color: 'rgba(245,245,243,0.65)', maxWidth: '680px', margin: 0 }}>
+            20+ years building meaningful connections between brands, audiences, and communities &mdash; across
+            broadcast media, major advertising agencies, and digital platforms. Award-winning. Bilingual. Now
+            building the infrastructure for Filipino-American community discovery online.
+          </p>
+        </div>
+      </section>
+
+      {/* Career Narrative */}
+      <section style={{ padding: '80px 24px', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
+        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+          <p className="eyebrow" style={{ color: '#4F8EF7', marginBottom: '32px' }}>
+            Career Narrative
+          </p>
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
+            <div>
+              <h3
+                style={{
+                  fontSize: '0.9375rem',
+                  fontWeight: 600,
+                  color: 'rgba(245,245,243,0.9)',
+                  margin: '0 0 12px',
+                }}
+              >
+                The Broadcast Media & Agency Years
+              </h3>
+              <p className="body-lg" style={{ color: 'rgba(245,245,243,0.6)', margin: 0 }}>
+                My career started in the thick of major advertising \u2014 at Universal McCann Los Angeles, planning and
+                buying media for Sony Pictures Entertainment across seven film releases. From there, a decade at
+                ABS-CBN International / The Filipino Channel shaped everything. Over 10 years as an Account Executive
+                in Advertising Sales, I built campaigns and partnerships for marquee brands including McDonald&apos;s,
+                AT&amp;T, Verizon, Toyota, Walmart, U.S. Bank, Sony Pictures, and Remitly \u2014 connecting them with the
+                4+ million Filipino-Americans who called TFC their cultural home. A 3AF Digital Campaign of the Year
+                award and an MVP Most Outstanding Eventurer award marked the decade&apos;s high points.
+              </p>
+            </div>
+
+            <div>
+              <h3
+                style={{
+                  fontSize: '0.9375rem',
+                  fontWeight: 600,
+                  color: 'rgba(245,245,243,0.9)',
+                  margin: '0 0 12px',
+                }}
+              >
+                The Entrepreneurial Chapter
+              </h3>
+              <p className="body-lg" style={{ color: 'rgba(245,245,243,0.6)', margin: 0 }}>
+                In 2019, I founded JCB Strategic Media LLC and began serving clients directly as a marketing
+                strategist and media consultant \u2014 leading integrated campaigns for The Baker&apos;s Son by Valerio&apos;s
+                (brand launch), Goldilocks USA (national media buy), and others. During the COVID-19 pandemic, I
+                took on a public service role as a U.S. Census Bureau Enumerator \u2014 an experience that deepened my
+                appreciation for multilingual community outreach, federal compliance, and civic data integrity.
+              </p>
+            </div>
+
+            <div>
+              <h3
+                style={{
+                  fontSize: '0.9375rem',
+                  fontWeight: 600,
+                  color: 'rgba(245,245,243,0.9)',
+                  margin: '0 0 12px',
+                }}
+              >
+                The Builder Chapter
+              </h3>
+              <p className="body-lg" style={{ color: 'rgba(245,245,243,0.6)', margin: 0 }}>
+                In 2024, I built FilipinoFoodNearMe.org and FilipinoEventsNearMe.org from scratch \u2014 two
+                community platforms now serving 1,239+ business listings and 150+ events across the U.S., using
+                the same Next.js / Vercel / Sentry production stack used by professional engineering teams. I
+                didn&apos;t have a formal CS degree. I had strategy, curiosity, and AI-assisted development workflows.
+                The platforms grew because the need was real and the community responded. That&apos;s how I build
+                everything: with audience insight first, technology second.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Experience Timeline */}
+      <section style={{ padding: '80px 24px', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
+        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+          <p className="eyebrow" style={{ color: '#4F8EF7', marginBottom: '40px' }}>
+            Experience
+          </p>
+
+          <div style={{ position: 'relative' }}>
+            {timeline.map((item, i) => (
+              <div
+                key={i}
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: '160px 1fr',
+                  gap: '24px',
+                  marginBottom: '40px',
+                  alignItems: 'start',
+                }}
+                className="timeline-row"
+              >
+                {/* Date */}
+                <div
+                  style={{
+                    fontSize: '0.8125rem',
+                    color: 'rgba(245,245,243,0.4)',
+                    paddingTop: '2px',
+                    textAlign: 'right',
+                    lineHeight: 1.5,
+                  }}
+                  className="timeline-date"
+                >
+                  {item.period}
+                </div>
+
+                {/* Content */}
+                <div
+                  style={{
+                    borderLeft: '1px solid rgba(255,255,255,0.08)',
+                    paddingLeft: '24px',
+                    position: 'relative',
+                  }}
+                >
+                  {/* Dot */}
+                  <div
+                    style={{
+                      position: 'absolute',
+                      left: '-5px',
+                      top: '6px',
+                      width: '8px',
+                      height: '8px',
+                      borderRadius: '50%',
+                      backgroundColor: '#4F8EF7',
+                    }}
+                  />
+                  <p style={{ fontSize: '1rem', fontWeight: 600, color: '#F5F5F3', margin: '0 0 4px' }}>
+                    {item.role}
+                  </p>
+                  <p style={{ fontSize: '0.875rem', color: '#4F8EF7', margin: '0 0 4px', fontWeight: 500 }}>
+                    {item.org}
+                  </p>
+                  <p style={{ fontSize: '0.8125rem', color: 'rgba(245,245,243,0.4)', margin: '0 0 8px' }}>
+                    {item.location}
+                  </p>
+                  {item.notes && (
+                    <p style={{ fontSize: '0.8125rem', color: 'rgba(245,245,243,0.5)', margin: 0, fontStyle: 'italic' }}>
+                      {item.notes}
+                    </p>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+      </section>
+
+      {/* Competencies */}
+      <section style={{ padding: '80px 24px', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
+        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+          <p className="eyebrow" style={{ color: '#4F8EF7', marginBottom: '32px' }}>
+            Core Competencies
+          </p>
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(2, 1fr)',
+              gap: '12px',
+            }}
+            className="competency-grid"
+          >
+            {competencies.map((c) => (
+              <div
+                key={c}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '10px',
+                  padding: '14px 16px',
+                  backgroundColor: 'rgba(255,255,255,0.03)',
+                  border: '1px solid rgba(255,255,255,0.06)',
+                  borderRadius: '8px',
+                }}
+              >
+                <CheckCircle2 size={16} style={{ color: '#4F8EF7', flexShrink: 0 }} />
+                <span style={{ fontSize: '0.875rem', color: 'rgba(245,245,243,0.75)' }}>{c}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+      </section>
+
+      {/* Education */}
+      <section style={{ padding: '80px 24px', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
+        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+          <p className="eyebrow" style={{ color: '#4F8EF7', marginBottom: '32px' }}>
+            Education
+          </p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+            <div
+              style={{
+                padding: '20px 24px',
+                backgroundColor: 'rgba(255,255,255,0.03)',
+                border: '1px solid rgba(255,255,255,0.06)',
+                borderRadius: '10px',
+              }}
+            >
+              <p style={{ fontSize: '0.9375rem', fontWeight: 600, color: '#F5F5F3', margin: '0 0 4px' }}>
+                San Beda University
+              </p>
+              <p style={{ fontSize: '0.875rem', color: '#4F8EF7', margin: '0 0 4px' }}>
+                Bachelor&apos;s Degree, Management
+              </p>
+              <p style={{ fontSize: '0.8125rem', color: 'rgba(245,245,243,0.45)', margin: 0 }}>Philippines</p>
+            </div>
+            <div
+              style={{
+                padding: '20px 24px',
+                backgroundColor: 'rgba(255,255,255,0.03)',
+                border: '1px solid rgba(255,255,255,0.06)',
+                borderRadius: '10px',
+              }}
+            >
+              <p style={{ fontSize: '0.9375rem', fontWeight: 600, color: '#F5F5F3', margin: '0 0 4px' }}>
+                WES International Academic Credential Evaluation
+              </p>
+              <p style={{ fontSize: '0.875rem', color: '#4F8EF7', margin: '0 0 4px' }}>
+                World Education Services (WES) &middot; 2024
+              </p>
+              <p style={{ fontSize: '0.8125rem', color: 'rgba(245,245,243,0.45)', margin: 0 }}>
+                WES-verified for U.S. employment equivalency
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Skills */}
+      <section style={{ padding: '80px 24px' }}>
+        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+          <p className="eyebrow" style={{ color: '#4F8EF7', marginBottom: '32px' }}>
+            Top Skills
+          </p>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
+            {skills.map((skill) => (
+              <span
+                key={skill}
+                style={{
+                  fontSize: '0.875rem',
+                  backgroundColor: 'rgba(79,142,247,0.08)',
+                  border: '1px solid rgba(79,142,247,0.2)',
+                  borderRadius: '9999px',
+                  padding: '8px 16px',
+                  color: 'rgba(245,245,243,0.75)',
+                }}
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+  )
+}
