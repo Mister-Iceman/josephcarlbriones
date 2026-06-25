@@ -5,10 +5,10 @@ import CaseStudyCard from '@/components/work/CaseStudyCard'
 export const metadata: Metadata = {
   title: 'Work',
   description:
-    'Case studies spanning 20+ years: digital campaigns, live events, brand launches, community platforms, and public service. Joseph Carl Briones portfolio.',
+    'Case studies spanning 20+ years: digital campaigns, live events, brand launches, community platforms, and public service. Joseph Carl R. Briones portfolio.',
 }
 
-const filterTabs = ['All', 'Digital', 'Events', 'Brand Launch', 'Platform', 'Public Service']
+const filterTabs = ['All', 'Digital', 'Social Media', 'Events', 'Brand Launch', 'Platform', 'Public Service']
 
 export default function WorkPage() {
   return (

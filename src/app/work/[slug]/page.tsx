@@ -3,6 +3,38 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { Trophy, ArrowLeft, ArrowRight } from 'lucide-react'
 import { caseStudies } from '@/data/caseStudies'
+import CaseStudyGallery from '@/components/CaseStudyGallery'
+import VideoGallery, { type VideoEntry } from '@/components/VideoGallery'
+import { gallery3AF, galleryASAP, galleryBakersSon, type GalleryImage } from '@/data/galleryImages'
+import { videos3AF, videosMartin } from '@/data/videoData'
+
+const galleryMap: Record<string, GalleryImage[]> = {
+  '3af-digital-campaign-of-the-year': gallery3AF,
+  'asap-live-ny-barclays-center': galleryASAP,
+  'the-bakers-son-brand-launch': galleryBakersSon,
+  'martin-purefoods-digital-social': [
+    {
+      src: '/images/case-studies/martin-social-lumpia-day.jpg',
+      alt: 'Martin Purefoods Happy National Lumpia Day social media post — Facebook',
+      caption: 'Martin Purefoods — National Lumpia Day content · Facebook',
+    },
+    {
+      src: '/images/case-studies/martin-social-4th-of-july.jpg',
+      alt: 'Martin Purefoods BBQ Time — 4th of July social media post',
+      caption: 'Martin Purefoods — 4th of July campaign content',
+    },
+    {
+      src: '/images/case-studies/martin-social-gameday.jpg',
+      alt: 'Martin Purefoods Game Day Sunday Super Bowl social media post',
+      caption: 'Martin Purefoods — Game Day Sunday content · Super Bowl',
+    },
+  ],
+}
+
+const videoMap: Record<string, VideoEntry[]> = {
+  '3af-digital-campaign-of-the-year': videos3AF,
+  'martin-purefoods-digital-social': videosMartin,
+}
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -73,13 +105,13 @@ export default async function CaseStudyPage({ params }: Props) {
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '8px',
-                backgroundColor: 'rgba(247,184,79,0.1)',
-                border: '1px solid rgba(247,184,79,0.25)',
-                borderRadius: '6px',
+                backgroundColor: 'rgba(43,110,219,0.12)',
+                border: '0.5px solid rgba(91,151,255,0.3)',
+                borderRadius: '4px',
                 padding: '6px 14px',
                 marginBottom: '20px',
                 fontSize: '0.8125rem',
-                color: '#F7B84F',
+                color: 'var(--jcb-blue-bright)',
               }}
             >
               <Trophy size={14} />
@@ -188,6 +220,22 @@ export default async function CaseStudyPage({ params }: Props) {
               </p>
             </div>
           ))}
+
+          {/* Image gallery — shown for slugs with gallery entries */}
+          {galleryMap[cs.slug] && (
+            <CaseStudyGallery
+              images={galleryMap[cs.slug]}
+              title="Campaign Visual Evidence"
+            />
+          )}
+
+          {/* Video gallery — only shown when there are videos with confirmed YouTube IDs */}
+          {videoMap[cs.slug]?.some((v) => v.youtubeId) && (
+            <VideoGallery
+              videos={videoMap[cs.slug].filter((v) => v.youtubeId)}
+              sectionTitle="Video Evidence"
+            />
+          )}
 
           {/* What This Demonstrates */}
           <div

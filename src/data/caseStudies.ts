@@ -131,6 +131,32 @@ export const caseStudies: CaseStudy[] = [
       'Media strategy, planning, and buying expertise across broadcast, cable, OTT, and digital \u2014 with specific experience in both nationwide campaigns and targeted multicultural market execution.',
   },
   {
+    slug: 'martin-purefoods-digital-social',
+    title: 'Martin Purefoods — Digital & Social Campaign',
+    client: 'Martin Purefoods Corporation',
+    category: 'Digital Campaign · Social Media · TV Production',
+    year: '2021–2022',
+    award: null,
+    featured: false,
+    tags: ['Digital', 'Social Media', 'TVC Production', 'Filipino Brand'],
+    audiences: ['private', 'clients'],
+    heroStat: { value: '8+', label: 'TVCs produced & placed' },
+    stats: [
+      { value: '8+', label: 'TVCs produced & placed' },
+      { value: '6+', label: 'Platforms reached' },
+      { value: 'National', label: 'Cable + digital + social' },
+    ],
+    situation:
+      'Martin Purefoods Corporation is a major Filipino processed meats brand (tocino, longganisa, hotdogs, franks) seeking to grow its U.S. market presence among Filipino-American households and position itself as a mainstream crossover brand.',
+    task: 'Campaign strategist, media planner/buyer, and social media manager. Responsible for full TVC production coordination, media planning across broadcast and digital platforms, and managing Martin Purefoods social media content on Facebook and Instagram (published as Carl Briones, social media manager).',
+    action:
+      'Led with full TVC production to establish brand authority and quality perception, then sustained awareness through targeted social media content aligned to Filipino-American cultural moments — National Lumpia Day, Filipino-American History Month (October), 4th of July, Super Bowl Sunday, and Christmas/holiday season. Produced and media-planned 8+ TV commercials across product lines (Pork Belly Tocino, Lumpia Shanghai, All-Beef Franks, Longanisa, Hot Dogs, Spaghetti). Placed across TFC nationwide cable, GMA Pinoy TV, and digital OTT platforms with YouTube Ads, Facebook/Instagram Ads, programmatic buys, and paid Google Search. Managed social media content calendar with culturally resonant seasonal posts. Platforms: TFC (nationwide cable), GMA Pinoy TV, YouTube Ads, Facebook Ads, Instagram Ads, Google Search (Paid), Rakuten VIKI, Programmatic display.',
+    result:
+      'Consistent national brand presence across Filipino-American media platforms and mainstream digital channels. Cultural calendar content strategy created year-round engagement with the Filipino-American audience — recognizing them during heritage events while sustaining presence during mainstream U.S. holidays.',
+    demonstrates:
+      'Full-funnel multicultural marketing execution — from TVC production coordination through media planning, digital activation, and social media content management. The breadth of platform coverage (broadcast cable, OTT, social, search, programmatic) and the culturally informed content calendar demonstrate both media planning discipline and cultural audience intelligence.',
+  },
+  {
     slug: 'filipinofoodnearme-platform',
     title: 'FilipinoFoodNearMe.org',
     client: 'Self-Founded \u00b7 FilAm Network',

@@ -59,3 +59,44 @@ Content: Grand opening invitation + logo composite
 ## awards/wes-credential.jpg
 Source: WES_Credential_Authenticated_Evaluation__Joseph_Carl_R_Briones.pdf — PAGE 1
 Content: The full WES credential evaluation letter (scan/screenshot)
+
+---
+
+## Martin Purefoods — Social Media Screenshots
+
+## case-studies/martin-social-lumpia-day.jpg
+Source: JCBSM__Digital_and_Social_Media_Campaigns.pdf — PAGE 3, CENTER
+Content: "Happy National Lumpia Day!" Facebook post with lumpia photography
+
+## case-studies/martin-social-4th-of-july.jpg
+Source: JCBSM__Digital_and_Social_Media_Campaigns.pdf — PAGE 3, CENTER RIGHT
+Content: "IT'S BBQ TIME! Happy 4th of July!" post with hotdog imagery
+
+## case-studies/martin-social-gameday.jpg
+Source: JCBSM__Digital_and_Social_Media_Campaigns.pdf — PAGE 3, FAR RIGHT
+Content: "Game Day Sunday 02.13.2022 — We Are!" Super Bowl post
+
+---
+
+## Portfolio Section Images (optional thumbnails)
+
+## portfolio/goldilocks-waze.jpg
+Source: JCBSM__EventsOutdoorActivation.pdf — PAGE 2, Waze ads section
+Content: Screenshot of Waze map ads showing Goldilocks store pins and promo
+
+## portfolio/direct-mail-collage.jpg
+Source: JCBSM__Actual_Advertising_Campaigns.pdf — PAGE 11
+Content: Collage of direct mail pieces (Ding door drop, Baker's Son mailer, RJB mailer)
+
+## portfolio/tfc-movies-grassroots.jpg
+Source: JCBSM__Actual_Advertising_Campaigns.pdf — PAGE 14
+Content: Quezon's Game poster + route maps from grassroots distribution campaign
+
+## portfolio/martin-social.jpg
+Representative thumbnail for Martin Purefoods social media section
+
+## portfolio/leano-social.jpg
+Representative thumbnail for Leano & Cruz social media section
+
+## portfolio/rjb-social.jpg
+Representative thumbnail for RJB Law Offices social media section
