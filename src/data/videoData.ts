@@ -165,7 +165,7 @@ export const videosBakersSon: VideoEntry[] = [
   { type: 'youtube', youtubeId: 'f2HA82Ix9XQ', title: "The Baker's Son — TVC-30s 'Fresh'", description: "30-second brand TVC · KRON4, TFC" },
   { type: 'youtube', youtubeId: 'hwWarFrRWwA', title: "The Baker's Son — TVC-15s 'Special'", description: "15-second product TV spot" },
   { type: 'youtube', youtubeId: 'YqYLFJ1L9G8', title: "The Baker's Son — TVC-15s 'Everyday'", description: "15-second product TV spot" },
-  { type: 'youtube', youtubeId: '1UgXI_GQlYE', title: "The Baker's Son — Christmas TVC", description: "Holiday TV commercial" },
+  { type: 'youtube', youtubeId: 'B9giH9PvY0o', title: "The Baker's Son — Christmas TVC", description: "Holiday TV commercial" },
   { type: 'youtube', youtubeId: 'LEUabPYQVy0', title: "The Baker's Son launches in Florida — Tayo / ABS-CBN", description: "ABS-CBN news feature · brand launch coverage" },
 ]
 
