@@ -149,20 +149,8 @@ export const videosTVSegments: VideoEntry[] = [
 
 /* ── CONTENT PRODUCTION — MAN ON THE STREET ────────────────────────────── */
 export const videosContentProduction: VideoEntry[] = [
-  {
-    type: 'youtube',
-    youtubeId: '',
-    title: 'New Yorkers Try Ensaymada for the First Time!',
-    description:
-      'Goldilocks USA · Man on the Street · Times Square, New York · YouTube + Facebook + TikTok',
-  },
-  {
-    type: 'youtube',
-    youtubeId: '',
-    title: 'Strangers in LA Try Ensaymada for the First Time',
-    description:
-      'Goldilocks USA · Man on the Street · Hollywood Walk of Fame, Los Angeles · YouTube + Facebook + TikTok',
-  },
+  { type: 'youtube', youtubeId: 'wiZfB517o3I', title: "New Yorkers Try Ensaymada for the First Time!", description: "Goldilocks USA · Man on the Street · Times Square, NYC" },
+  { type: 'youtube', youtubeId: 'QwGG7gk37xk', title: "Strangers in LA Try Ensaymada for the First Time", description: "Goldilocks USA · Man on the Street · Hollywood Walk of Fame, LA" },
 ]
 
 /* ── CONVENIENCE EXPORTS: by case study slug ────────────────────────────── */
@@ -173,9 +161,13 @@ export const videos3AF: VideoEntry[] = [
 
 export const videosASAP: VideoEntry[] = []
 
-export const videosBakersSon: VideoEntry[] = videosTVCs.filter((v) =>
-  v.title.includes("Baker's Son"),
-)
+export const videosBakersSon: VideoEntry[] = [
+  { type: 'youtube', youtubeId: 'f2HA82Ix9XQ', title: "The Baker's Son — TVC-30s 'Fresh'", description: "30-second brand TVC · KRON4, TFC" },
+  { type: 'youtube', youtubeId: 'hwWarFrRWwA', title: "The Baker's Son — TVC-15s 'Special'", description: "15-second product TV spot" },
+  { type: 'youtube', youtubeId: 'YqYLFJ1L9G8', title: "The Baker's Son — TVC-15s 'Everyday'", description: "15-second product TV spot" },
+  { type: 'youtube', youtubeId: '1UgXI_GQlYE', title: "The Baker's Son — Christmas TVC", description: "Holiday TV commercial" },
+  { type: 'youtube', youtubeId: 'LEUabPYQVy0', title: "The Baker's Son launches in Florida — Tayo / ABS-CBN", description: "ABS-CBN news feature · brand launch coverage" },
+]
 
 export const videosGoldilocks: VideoEntry[] = [
   ...videosTVCs.filter((v) => v.title.includes('Goldilocks')),
@@ -183,6 +175,14 @@ export const videosGoldilocks: VideoEntry[] = [
   ...videosContentProduction,
 ]
 
-export const videosMartin: VideoEntry[] = videosTVCs.filter((v) =>
-  v.title.includes('Martin'),
-)
+export const videosMartin: VideoEntry[] = [
+  { type: 'youtube', youtubeId: '0Zx24YQ81ns', title: "Martin Purefoods — Pork Belly Tocino TVC (v1)", description: "16-second TV commercial · TFC, GMA Pinoy TV" },
+  { type: 'youtube', youtubeId: 'qc667boR86A', title: "Martin Purefoods — Pork Belly Tocino TVC (v2)", description: "16-second TV commercial" },
+  { type: 'youtube', youtubeId: 'WwzEbxSWjJ0', title: "Martin Purefoods — Lumpia Shanghai TVC (v1)", description: "31-second TV commercial" },
+  { type: 'youtube', youtubeId: 'SQTsVGuROUA', title: "Martin Purefoods — Lumpia Shanghai TVC (v2)", description: "31-second TV commercial" },
+  { type: 'youtube', youtubeId: 'wg9_zWTJHpg', title: "Martin Purefoods — All-Beef Franks TVC", description: "16-second product TV commercial" },
+  { type: 'youtube', youtubeId: 'lqPEwDtGZ1U', title: "Martin Purefoods — Spaghetti with Red Hotdogs TVC", description: "Product TV commercial" },
+  { type: 'youtube', youtubeId: 'DSFipS-zSfI', title: "Martin Purefoods — Longganisa TVC", description: "16-second product TV commercial" },
+  { type: 'youtube', youtubeId: '1UgXI_GQlYE', title: "Martin Purefoods — All Beef and Pork Hotdogs TVC", description: "Product TV commercial" },
+  { type: 'youtube', youtubeId: 'eqguvrfstpA', title: "Martin Purefoods — Christmas Campaign TVC", description: "Holiday TV commercial · Sarap Ng Pasko" },
+]
