@@ -96,7 +96,7 @@ function VideoCard({ video }: { video: VideoEntry }) {
 
   // YouTube — inline lightbox
   const thumbUrl = `https://img.youtube.com/vi/${video.youtubeId}/mqdefault.jpg`
-  const embedUrl = `https://www.youtube.com/embed/${video.youtubeId}?autoplay=1&rel=0&modestbranding=1`
+  const embedUrl = `https://www.youtube-nocookie.com/embed/${video.youtubeId}?autoplay=1&rel=0&modestbranding=1`
 
   return (
     <>
