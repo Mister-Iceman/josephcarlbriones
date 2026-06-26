@@ -19,6 +19,7 @@ export const videosAwardRecognition: VideoEntry[] = [
     title: '3AF Award — On-Stage Acknowledgment',
     description:
       'TFC Ad Sales Director Ricky Resurreccion acknowledges Carl Briones on stage for outstanding project management · 3AF Excellence Awards · June 2018',
+    role: 'Award Recognition',
   },
 ]
 
@@ -36,31 +37,31 @@ export const videosDigitalCampaigns: VideoEntry[] = [
 
 // Baker's Son — all IDs confirmed
 export const videosBakersSon: VideoEntry[] = [
-  { type: 'youtube', youtubeId: 'f2HA82Ix9XQ', title: "The Baker's Son — TVC-30s 'Fresh'", description: "30-second brand TVC · KRON4, TFC" },
-  { type: 'youtube', youtubeId: 'hwWarFrRWwA', title: "The Baker's Son — TVC-15s 'Special'", description: "15-second product TV spot" },
-  { type: 'youtube', youtubeId: 'YqYLFJ1L9G8', title: "The Baker's Son — TVC-15s 'Everyday'", description: "15-second product TV spot" },
-  { type: 'youtube', youtubeId: 'B9giH9PvY0o', title: "The Baker's Son — Christmas TVC", description: "Holiday TV commercial" },
-  { type: 'youtube', youtubeId: 'LEUabPYQVy0', title: "The Baker's Son launches in Florida — Tayo / ABS-CBN", description: "ABS-CBN news feature · brand launch coverage" },
+  { type: 'youtube', youtubeId: 'f2HA82Ix9XQ', title: "The Baker's Son — TVC-30s 'Fresh'",    description: "30-second brand TVC · KRON4, TFC",          role: 'Full Production · Media Planning & Buying' },
+  { type: 'youtube', youtubeId: 'hwWarFrRWwA', title: "The Baker's Son — TVC-15s 'Special'",  description: "15-second product TV spot",                  role: 'Full Production · Media Planning & Buying' },
+  { type: 'youtube', youtubeId: 'YqYLFJ1L9G8', title: "The Baker's Son — TVC-15s 'Everyday'", description: "15-second product TV spot",                  role: 'Full Production · Media Planning & Buying' },
+  { type: 'youtube', youtubeId: 'B9giH9PvY0o', title: "The Baker's Son — Christmas TVC",       description: "Holiday TV commercial",                      role: 'Full Production · Media Planning & Buying' },
+  { type: 'youtube', youtubeId: 'LEUabPYQVy0', title: "The Baker's Son launches in Florida — Tayo / ABS-CBN", description: "ABS-CBN news feature · brand launch coverage", role: 'Media Planning & Buying' },
 ]
 
 // Martin Purefoods — all IDs confirmed
 export const videosMartin: VideoEntry[] = [
-  { type: 'youtube', youtubeId: '0Zx24YQ81ns', title: "Martin Purefoods — Pork Belly Tocino TVC (v1)", description: "16-second TV commercial · TFC, GMA Pinoy TV" },
-  { type: 'youtube', youtubeId: 'qc667boR86A', title: "Martin Purefoods — Pork Belly Tocino TVC (v2)", description: "16-second TV commercial" },
-  { type: 'youtube', youtubeId: 'WwzEbxSWjJ0', title: "Martin Purefoods — Lumpia Shanghai TVC (v1)", description: "31-second TV commercial" },
-  { type: 'youtube', youtubeId: 'SQTsVGuROUA', title: "Martin Purefoods — Lumpia Shanghai TVC (v2)", description: "31-second TV commercial" },
-  { type: 'youtube', youtubeId: 'wg9_zWTJHpg', title: "Martin Purefoods — All-Beef Franks TVC", description: "16-second product TV commercial" },
-  { type: 'youtube', youtubeId: 'lqPEwDtGZ1U', title: "Martin Purefoods — Spaghetti with Red Hotdogs TVC", description: "Product TV commercial" },
-  { type: 'youtube', youtubeId: 'DSFipS-zSfI', title: "Martin Purefoods — Longganisa TVC", description: "16-second product TV commercial" },
-  { type: 'youtube', youtubeId: '1UgXI_GQlYE', title: "Martin Purefoods — All Beef and Pork Hotdogs TVC", description: "Product TV commercial" },
-  { type: 'youtube', youtubeId: 'eqguvrfstpA', title: "Martin Purefoods — Christmas Campaign TVC", description: "Holiday TV commercial · Sarap Ng Pasko" },
+  { type: 'youtube', youtubeId: '0Zx24YQ81ns', title: "Martin Purefoods — Pork Belly Tocino TVC (v1)",       description: "16-second TV commercial · TFC, GMA Pinoy TV", role: 'Full Production · Media Planning & Buying' },
+  { type: 'youtube', youtubeId: 'qc667boR86A', title: "Martin Purefoods — Pork Belly Tocino TVC (v2)",       description: "16-second TV commercial",                    role: 'Full Production · Media Planning & Buying' },
+  { type: 'youtube', youtubeId: 'WwzEbxSWjJ0', title: "Martin Purefoods — Lumpia Shanghai TVC (v1)",         description: "31-second TV commercial",                    role: 'Full Production · Media Planning & Buying' },
+  { type: 'youtube', youtubeId: 'SQTsVGuROUA', title: "Martin Purefoods — Lumpia Shanghai TVC (v2)",         description: "31-second TV commercial",                    role: 'Full Production · Media Planning & Buying' },
+  { type: 'youtube', youtubeId: 'wg9_zWTJHpg', title: "Martin Purefoods — All-Beef Franks TVC",              description: "16-second product TV commercial",            role: 'Full Production · Media Planning & Buying' },
+  { type: 'youtube', youtubeId: 'lqPEwDtGZ1U', title: "Martin Purefoods — Spaghetti with Red Hotdogs TVC",  description: "Product TV commercial",                      role: 'Full Production · Media Planning & Buying' },
+  { type: 'youtube', youtubeId: 'DSFipS-zSfI', title: "Martin Purefoods — Longganisa TVC",                   description: "16-second product TV commercial",            role: 'Full Production · Media Planning & Buying' },
+  { type: 'youtube', youtubeId: '1UgXI_GQlYE', title: "Martin Purefoods — All Beef and Pork Hotdogs TVC",   description: "Product TV commercial",                      role: 'Full Production · Media Planning & Buying' },
+  { type: 'youtube', youtubeId: 'eqguvrfstpA', title: "Martin Purefoods — Christmas Campaign TVC",           description: "Holiday TV commercial · Sarap Ng Pasko",    role: 'Full Production · Media Planning & Buying' },
 ]
 
 // Goldilocks — IDs not yet confirmed
 const _goldilocksPlaceholderTVCs: VideoEntry[] = [
-  { type: 'youtube', youtubeId: '', title: 'Goldilocks USA — Holiday 2021 TVC', description: '30-second holiday TV commercial · TFC, KRON4, KRON ON' },
-  { type: 'youtube', youtubeId: '', title: 'Goldilocks USA — Ensaymada TVC', description: 'Product TV commercial · 30-second' },
-  { type: 'youtube', youtubeId: '', title: 'Goldilocks USA — Mamon TVC', description: 'Product TV commercial · 30-second' },
+  { type: 'youtube', youtubeId: '', title: 'Goldilocks USA — Holiday 2021 TVC',  description: '30-second holiday TV commercial · TFC, KRON4, KRON ON', role: 'Media Planning & Buying' },
+  { type: 'youtube', youtubeId: '', title: 'Goldilocks USA — Ensaymada TVC',     description: 'Product TV commercial · 30-second',                    role: 'Media Planning & Buying' },
+  { type: 'youtube', youtubeId: '', title: 'Goldilocks USA — Mamon TVC',         description: 'Product TV commercial · 30-second',                    role: 'Media Planning & Buying' },
 ]
 
 // RJB Law — ID not yet confirmed
@@ -78,16 +79,16 @@ export const videosTVCs: VideoEntry[] = [
 
 /* ── TV SEGMENTS ────────────────────────────────────────────────────────── */
 export const videosTVSegments: VideoEntry[] = [
-  { type: 'youtube', youtubeId: '', title: 'Goldilocks USA — "By the Way" Facebook Live Segment', description: 'Facebook Live stream · Hosted segment with GELO · TFC' },
-  { type: 'youtube', youtubeId: '', title: 'Goldilocks USA — Holiday Gift Baskets Segment', description: 'TV news segment · KRON4 · goldilocks-usa.com promotion' },
-  { type: 'youtube', youtubeId: '', title: "The Baker's Son — Gift Basket Feature", description: "TV segment featuring the Baker's Son product line · TFC / BUSA" },
-  { type: 'youtube', youtubeId: '', title: "The Baker's Son — BRG 'Our Daily Bread' Feature", description: 'Community TV segment feature' },
+  { type: 'youtube', youtubeId: '', title: 'Goldilocks USA — "By the Way" Facebook Live Segment', description: 'Facebook Live stream · Hosted segment with GELO · TFC',  role: 'Media Planning & Buying' },
+  { type: 'youtube', youtubeId: '', title: 'Goldilocks USA — Holiday Gift Baskets Segment',        description: 'TV news segment · KRON4 · goldilocks-usa.com promotion', role: 'Media Planning & Buying' },
+  { type: 'youtube', youtubeId: '', title: "The Baker's Son — Gift Basket Feature",                description: "TV segment featuring the Baker's Son product line · TFC / BUSA", role: 'Media Planning & Buying' },
+  { type: 'youtube', youtubeId: '', title: "The Baker's Son — BRG 'Our Daily Bread' Feature",     description: 'Community TV segment feature',                           role: 'Media Planning & Buying' },
 ]
 
 /* ── CONTENT PRODUCTION — MAN ON THE STREET ────────────────────────────── */
 export const videosContentProduction: VideoEntry[] = [
-  { type: 'youtube', youtubeId: 'wiZfB517o3I', title: "New Yorkers Try Ensaymada for the First Time!", description: "Goldilocks USA · Man on the Street · Times Square, NYC" },
-  { type: 'youtube', youtubeId: 'QwGG7gk37xk', title: "Strangers in LA Try Ensaymada for the First Time", description: "Goldilocks USA · Man on the Street · Hollywood Walk of Fame, LA" },
+  { type: 'youtube', youtubeId: 'wiZfB517o3I', title: "New Yorkers Try Ensaymada for the First Time!",      description: "Goldilocks USA · Man on the Street · Times Square, NYC",        role: 'Full Content Production' },
+  { type: 'youtube', youtubeId: 'QwGG7gk37xk', title: "Strangers in LA Try Ensaymada for the First Time",   description: "Goldilocks USA · Man on the Street · Hollywood Walk of Fame, LA", role: 'Full Content Production' },
 ]
 
 /* ── CONVENIENCE EXPORTS: by case study slug ────────────────────────────── */

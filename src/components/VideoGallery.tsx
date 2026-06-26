@@ -3,6 +3,7 @@ export interface VideoEntry {
   youtubeId: string
   title: string
   description: string
+  role?: string
 }
 
 interface VideoGalleryProps {
@@ -39,6 +40,7 @@ function VideoCard({ video }: { video: VideoEntry }) {
         <div className="vg-body">
           <p className="vg-title">{video.title}</p>
           <p className="vg-desc">{video.description}</p>
+          {video.role && <span className="cs-video__role">{video.role}</span>}
           <span className="vg-badge">Coming soon</span>
         </div>
       </div>
@@ -71,6 +73,7 @@ function VideoCard({ video }: { video: VideoEntry }) {
       <div className="vg-body">
         <p className="vg-title">{video.title}</p>
         <p className="vg-desc">{video.description}</p>
+        {video.role && <span className="cs-video__role">{video.role}</span>}
         <span className="vg-cta">Watch on YouTube →</span>
       </div>
     </a>
