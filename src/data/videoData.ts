@@ -26,7 +26,8 @@ export const videosAwardRecognition: VideoEntry[] = [
 /* ── DIGITAL CAMPAIGNS ──────────────────────────────────────────────────── */
 export const videosDigitalCampaigns: VideoEntry[] = [
   {
-    type: 'youtube',
+    type: 'facebook',
+    facebookUrl: 'https://www.facebook.com/reel/1630410013684053',
     youtubeId: '',
     title: '12 Days of Filipino Christmas Caroling — Remitly × TFC',
     description: 'Award-winning Facebook Live campaign · December 2018 · 500K+ global viewers',
@@ -80,13 +81,11 @@ export const videosTVCs: VideoEntry[] = [
 
 /* ── TV SEGMENTS ────────────────────────────────────────────────────────── */
 export const videosTVSegments: VideoEntry[] = [
-  { type: 'youtube', youtubeId: 'wooTeJJ0B0Q', title: 'Goldilocks USA — KRON4 News Feature',                  description: 'TV news segment · KRON4',                                    role: 'Media Planning & Buying' },
-  { type: 'youtube', youtubeId: 'yQFsyNiwbqg', title: 'Goldilocks USA — TFC TV Segment',                      description: 'TV segment · The Filipino Channel',                          role: 'Media Planning & Buying' },
-  { type: 'youtube', youtubeId: 'KaWd2tMlqEo', title: "The Baker's Son — TFC TV Segment (with GELO)",         description: "TV segment · The Filipino Channel",                          role: 'Full Production · Media Planning & Buying' },
-  { type: 'youtube', youtubeId: '',             title: 'Goldilocks USA — "By the Way" Facebook Live Segment', description: 'Facebook Live stream · Hosted segment with GELO · TFC',     role: 'Media Planning & Buying' },
-  { type: 'youtube', youtubeId: '',             title: 'Goldilocks USA — Holiday Gift Baskets Segment',       description: 'TV news segment · KRON4 · goldilocks-usa.com promotion',    role: 'Media Planning & Buying' },
-  { type: 'youtube', youtubeId: '',             title: "The Baker's Son — Gift Basket Feature",               description: "TV segment featuring the Baker's Son product line · TFC / BUSA", role: 'Media Planning & Buying' },
-  { type: 'youtube', youtubeId: '',             title: "The Baker's Son — BRG 'Our Daily Bread' Feature",     description: 'Community TV segment feature',                               role: 'Media Planning & Buying' },
+  { type: 'youtube', youtubeId: 'wooTeJJ0B0Q', title: 'Goldilocks USA — KRON4 News Feature',          description: 'TV news segment · KRON4',                   role: 'Media Planning & Buying' },
+  { type: 'youtube', youtubeId: 'yQFsyNiwbqg', title: 'Goldilocks USA — TFC TV Segment',              description: 'TV segment · The Filipino Channel',           role: 'Media Planning & Buying' },
+  { type: 'youtube', youtubeId: 'KaWd2tMlqEo', title: "The Baker's Son — TFC TV Segment (with GELO)", description: 'TV segment · The Filipino Channel',           role: 'Full Production · Media Planning & Buying' },
+  // ID pending — check YouTube Studio unlisted uploads
+  { type: 'youtube', youtubeId: '',             title: 'Goldilocks USA — Holiday Gift Baskets Feature · KRON4', description: 'TV news segment · KRON4 Bay Area · holiday gift basket promotion', role: 'Media Planning & Buying' },
 ]
 
 /* ── CONTENT PRODUCTION — MAN ON THE STREET ────────────────────────────── */

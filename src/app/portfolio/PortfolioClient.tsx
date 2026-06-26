@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 import VideoGallery from '@/components/VideoGallery'
 import {
   videosAwardRecognition,
@@ -34,7 +35,8 @@ interface PortfolioItem {
   title: string
   description: string
   tags: string[]
-  pdfPath: string
+  pdfPath?: string
+  caseStudySlug?: string
   externalUrl?: string
   imageThumb?: string
 }
@@ -48,8 +50,8 @@ const portfolioItems: PortfolioItem[] = [
     description:
       'Seasonal holiday posts, Filipino-American cultural calendar content, and US mainstream event tie-ins (National Lumpia Day, 4th of July, Super Bowl). Published by Carl Briones as social media manager. Platforms: Facebook, Instagram.',
     tags: ['Social Media', 'Content Strategy', 'Filipino-American'],
-    pdfPath: '/pdfs/JCBSM-Digital-Social-Media-Campaigns.pdf',
-    imageThumb: '/images/portfolio/martin-social.jpg',
+    caseStudySlug: 'martin-purefoods-digital-social',
+    imageThumb: '', // image pending screenshot from PDF
   },
   {
     category: 'social',
@@ -58,8 +60,7 @@ const portfolioItems: PortfolioItem[] = [
     description:
       'Educational social media series covering tax deductions, IRA contributions, child tax credits, EV credits, and bookkeeping services. Targeted to Filipino-American small business owners and families. Platform: Facebook.',
     tags: ['Social Media', 'Education Content', 'Small Business'],
-    pdfPath: '/pdfs/JCBSM-Digital-Social-Media-Campaigns.pdf',
-    imageThumb: '/images/portfolio/leano-social.jpg',
+    imageThumb: '', // image pending screenshot from PDF
   },
   {
     category: 'social',
@@ -68,8 +69,7 @@ const portfolioItems: PortfolioItem[] = [
     description:
       'Facebook social media series for RJB Law Offices (Family Finance Lawyers) targeting Filipino-Americans facing financial distress. Emotional storytelling approach — "Libreng Konsulta" CTA. Serving LA, Orange, San Bernardino, Riverside, and Santa Barbara counties.',
     tags: ['Social Media', 'Legal Services', 'Filipino-American'],
-    pdfPath: '/pdfs/JCBSM-Digital-Social-Media-Campaigns.pdf',
-    imageThumb: '/images/portfolio/rjb-social.jpg',
+    imageThumb: '', // image pending screenshot from PDF
   },
   // Events & Activation
   {
@@ -79,7 +79,7 @@ const portfolioItems: PortfolioItem[] = [
     description:
       'Booth activations at Philippine Independence Day (Carson City, CA), Star Magic Concert (LA), TFC Concerts (LA + SF), and Jollibee partnership activations (Eagle Rock Mall + West Covina, CA). Brands: WorldRemit and Ding (digital top-up).',
     tags: ['Events', 'Brand Activation', 'Multicultural'],
-    pdfPath: '/pdfs/JCBSM-Events-Outdoor-Activation.pdf',
+    caseStudySlug: 'on-ground-activations-jcbsm',
     imageThumb: '/images/case-studies/activations-worldremit-independence-day.jpg',
   },
   {
@@ -89,7 +89,7 @@ const portfolioItems: PortfolioItem[] = [
     description:
       '12,000-capacity sold-out live event at Barclays Center. Head of Sponsorship and Ad Sales Logistics. Established sponsorship tier architecture, managed inter-regional U.S.–Philippines coordination, executed on-stage pre-show brand activations. Won MVP — Most Outstanding Eventurer.',
     tags: ['Live Event', 'Sponsorship', 'MVP Award'],
-    pdfPath: '/pdfs/MVP-ASAP-Live-New-York.pdf',
+    caseStudySlug: 'asap-live-ny-barclays-center',
     imageThumb: '/images/case-studies/asap-barclays-stage.jpg',
   },
   {
@@ -99,7 +99,7 @@ const portfolioItems: PortfolioItem[] = [
     description:
       "Supported launch of TFC's theatrical movie feature ('Quezon\\'s Game'). Installed posters and leave-behinds in strip malls with Filipino shops near theaters. 5-day, 54.3-mile coverage across North Hills/Panorama, DTLA/Vermont, Buena Park/Anaheim/Garden Grove, Carson City, and West Covina.",
     tags: ['Grassroots', 'Community Marketing', 'OOH Distribution'],
-    pdfPath: '/pdfs/JCBSM-Actual-Advertising-Campaigns.pdf',
+    caseStudySlug: 'on-ground-activations-jcbsm',
     imageThumb: '/images/portfolio/tfc-movies-grassroots.jpg',
   },
   // Out of Home
@@ -110,7 +110,7 @@ const portfolioItems: PortfolioItem[] = [
     description:
       'Billboard campaign in the vicinity of The Baker\'s Son Florida locations. "NOW OPEN — Take Exit 48" messaging. Static and digital billboard units. Campaign presence: Outfront Media placements.',
     tags: ['OOH', 'Billboard', 'Brand Launch'],
-    pdfPath: '/pdfs/JCBSM-Events-Outdoor-Activation.pdf',
+    caseStudySlug: 'the-bakers-son-brand-launch',
     imageThumb: '/images/case-studies/bakers-son-billboard.jpg',
   },
   {
@@ -120,7 +120,7 @@ const portfolioItems: PortfolioItem[] = [
     description:
       'Geo-targeted Waze map advertising highlighting Goldilocks store locations and pushing "$5 OFF with $50 purchase" promotions. Targeted users near Goldilocks Cerritos, Carson, Santa Clarita, and National City stores.',
     tags: ['OOH', 'Geo-targeting', 'Waze Ads'],
-    pdfPath: '/pdfs/JCBSM-Events-Outdoor-Activation.pdf',
+    caseStudySlug: 'goldilocks-usa-media-campaign',
     imageThumb: '/images/portfolio/goldilocks-waze.jpg',
   },
   // Direct Mail
@@ -131,7 +131,7 @@ const portfolioItems: PortfolioItem[] = [
     description:
       'Guided concept ideation and creative development for geo-targeted direct mail pieces. Ding: "Sa Ding PADA-LOAD, libre ang first ₱50 na load" — door drop to Filipino households. Baker\'s Son: "Dear Neighbor" grand opening letter + product mailer. RJB Law Offices: "Second Notice" style mailer for debt relief outreach.',
     tags: ['Direct Mail', 'Geo-targeting', 'Filipino-American'],
-    pdfPath: '/pdfs/JCBSM-Actual-Advertising-Campaigns.pdf',
+    caseStudySlug: 'the-bakers-son-brand-launch',
     imageThumb: '/images/portfolio/direct-mail-collage.jpg',
   },
   // Platforms
@@ -142,7 +142,6 @@ const portfolioItems: PortfolioItem[] = [
     description:
       'National directory of Filipino food businesses across the U.S. 1,200+ listings across 34+ states. Built with Next.js, Tailwind CSS, Vercel, and Claude Code.',
     tags: ['Platform', 'Founder', 'Next.js'],
-    pdfPath: '',
     externalUrl: 'https://www.filipinofoodnerarme.org',
   },
   {
@@ -152,7 +151,6 @@ const portfolioItems: PortfolioItem[] = [
     description:
       'National Filipino-American events calendar. 150+ events across 92+ cities. Built with Next.js, Tailwind CSS, Vercel, and Claude Code.',
     tags: ['Platform', 'Founder', 'Next.js'],
-    pdfPath: '',
     externalUrl: 'https://www.filipinoeventsnerarme.org',
   },
 ]
@@ -247,6 +245,16 @@ export default function PortfolioClient() {
 function PortfolioItemCard({ item }: { item: PortfolioItem }) {
   return (
     <div className="portfolio-card">
+      {item.imageThumb && (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={item.imageThumb}
+          alt=""
+          aria-hidden="true"
+          className="portfolio-card__thumb-img"
+        />
+      )}
+
       {item.externalUrl ? (
         <a
           href={item.externalUrl}
@@ -257,6 +265,10 @@ function PortfolioItemCard({ item }: { item: PortfolioItem }) {
         >
           <span aria-hidden="true">↗</span>
         </a>
+      ) : item.caseStudySlug ? (
+        <Link href={`/work/${item.caseStudySlug}`} className="portfolio-card__btn">
+          View Case Study →
+        </Link>
       ) : item.pdfPath ? (
         <div className="portfolio-card__actions">
           <a
