@@ -20,6 +20,7 @@ export interface CaseStudy {
   action: string
   result: string
   demonstrates: string
+  role?: string
 }
 
 export const caseStudies: CaseStudy[] = [
@@ -49,6 +50,7 @@ export const caseStudies: CaseStudy[] = [
       'The campaign achieved record December targets for Remitly, drove a 30% increase in site visits, and generated thousands of direct promo site visits. TFC reached over 500,000 viewers globally across North America, the Middle East, Asia, and Europe. Thousands of positive comments on Facebook from Filipinos worldwide \u2014 and a 3AF Digital Campaign of the Year award.',
     demonstrates:
       'Strategic cross-brand partnership development, culturally resonant content creation, measurable digital campaign execution, and multinational audience engagement \u2014 demonstrating both creative and analytical marketing capability applicable to any multicultural or community-facing communications program.',
+    role: 'Account Executive and Team Lead, ABS-CBN International / The Filipino Channel. Co-conceived the campaign partnership with Ad Sales Director Ricky Resurreccion and pitched it to Remitly as a first-of-its-kind branded digital caroling partnership. Served as Team Lead and Project Manager throughout execution \u2014 coordinating between the U.S. client (Remitly), the TFC U.S. sales team, and the TFC Manila production team. Responsible for client relationship management, sponsorship delivery, cross-regional team coordination, and campaign performance oversight. Content production was executed by the TFC Manila creative and production team.',
   },
   {
     slug: 'asap-live-ny-barclays-center',

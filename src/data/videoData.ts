@@ -30,6 +30,7 @@ export const videosDigitalCampaigns: VideoEntry[] = [
     youtubeId: '',
     title: '12 Days of Filipino Christmas Caroling — Remitly × TFC',
     description: 'Award-winning Facebook Live campaign · December 2018 · 500K+ global viewers',
+    role: 'Campaign Strategy · Team Lead · Project Management · ABS-CBN / TFC',
   },
 ]
 
