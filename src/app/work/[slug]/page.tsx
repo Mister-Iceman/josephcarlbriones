@@ -5,12 +5,13 @@ import { Trophy, ArrowLeft, ArrowRight } from 'lucide-react'
 import { caseStudies } from '@/data/caseStudies'
 import CaseStudyGallery from '@/components/CaseStudyGallery'
 import VideoGallery, { type VideoEntry } from '@/components/VideoGallery'
-import { gallery3AF, galleryASAP, galleryBakersSon, type GalleryImage } from '@/data/galleryImages'
+import { gallery3AF, galleryASAP, galleryActivations, galleryBakersSon, type GalleryImage } from '@/data/galleryImages'
 import { videos3AF, videosMartin } from '@/data/videoData'
 
 const galleryMap: Record<string, GalleryImage[]> = {
   '3af-digital-campaign-of-the-year': gallery3AF,
   'asap-live-ny-barclays-center': galleryASAP,
+  'on-ground-activations-jcbsm': galleryActivations,
   'the-bakers-son-brand-launch': galleryBakersSon,
   'martin-purefoods-digital-social': [
     {

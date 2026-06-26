@@ -58,16 +58,16 @@ export const videosMartin: VideoEntry[] = [
   { type: 'youtube', youtubeId: 'eqguvrfstpA', title: "Martin Purefoods — Christmas Campaign TVC",           description: "Holiday TV commercial · Sarap Ng Pasko",    role: 'Full Production · Media Planning & Buying' },
 ]
 
-// Goldilocks — IDs not yet confirmed
+// Goldilocks — IDs confirmed
 const _goldilocksPlaceholderTVCs: VideoEntry[] = [
-  { type: 'youtube', youtubeId: '', title: 'Goldilocks USA — Holiday 2021 TVC',  description: '30-second holiday TV commercial · TFC, KRON4, KRON ON', role: 'Media Planning & Buying' },
-  { type: 'youtube', youtubeId: '', title: 'Goldilocks USA — Ensaymada TVC',     description: 'Product TV commercial · 30-second',                    role: 'Media Planning & Buying' },
-  { type: 'youtube', youtubeId: '', title: 'Goldilocks USA — Mamon TVC',         description: 'Product TV commercial · 30-second',                    role: 'Media Planning & Buying' },
+  { type: 'youtube', youtubeId: '-q3qVD4r8wc', title: 'Goldilocks USA — Holiday 2021 TVC',  description: '30-second holiday TV commercial · TFC, KRON4, KRON ON', role: 'Media Planning & Buying' },
+  { type: 'youtube', youtubeId: 'EczqH2HECNg', title: 'Goldilocks USA — Ensaymada TVC',     description: 'Product TV commercial · 30-second',                    role: 'Media Planning & Buying' },
+  { type: 'youtube', youtubeId: 'J1ABwrKXa6M', title: 'Goldilocks USA — Mamon TVC',         description: 'Product TV commercial · 30-second',                    role: 'Media Planning & Buying' },
 ]
 
-// RJB Law — ID not yet confirmed
+// RJB Law — ID confirmed
 const _rjbPlaceholderTVC: VideoEntry[] = [
-  { type: 'youtube', youtubeId: '', title: 'RJB Law Offices — Brand TVC', description: '30-second TV commercial · bulaonlaw.com · KRON4, Ampersand' },
+  { type: 'youtube', youtubeId: '7KlWFnjV9Ew', title: 'RJB Law Offices — Brand TVC', description: '30-second TV commercial · bulaonlaw.com · KRON4, Ampersand', role: 'Media Planning & Buying' },
 ]
 
 // Assembled TVC list — Baker's Son and Martin show live thumbnails; Goldilocks and RJB show "Coming soon"
@@ -80,10 +80,13 @@ export const videosTVCs: VideoEntry[] = [
 
 /* ── TV SEGMENTS ────────────────────────────────────────────────────────── */
 export const videosTVSegments: VideoEntry[] = [
-  { type: 'youtube', youtubeId: '', title: 'Goldilocks USA — "By the Way" Facebook Live Segment', description: 'Facebook Live stream · Hosted segment with GELO · TFC',  role: 'Media Planning & Buying' },
-  { type: 'youtube', youtubeId: '', title: 'Goldilocks USA — Holiday Gift Baskets Segment',        description: 'TV news segment · KRON4 · goldilocks-usa.com promotion', role: 'Media Planning & Buying' },
-  { type: 'youtube', youtubeId: '', title: "The Baker's Son — Gift Basket Feature",                description: "TV segment featuring the Baker's Son product line · TFC / BUSA", role: 'Media Planning & Buying' },
-  { type: 'youtube', youtubeId: '', title: "The Baker's Son — BRG 'Our Daily Bread' Feature",     description: 'Community TV segment feature',                           role: 'Media Planning & Buying' },
+  { type: 'youtube', youtubeId: 'wooTeJJ0B0Q', title: 'Goldilocks USA — KRON4 News Feature',                  description: 'TV news segment · KRON4',                                    role: 'Media Planning & Buying' },
+  { type: 'youtube', youtubeId: 'yQFsyNiwbqg', title: 'Goldilocks USA — TFC TV Segment',                      description: 'TV segment · The Filipino Channel',                          role: 'Media Planning & Buying' },
+  { type: 'youtube', youtubeId: 'KaWd2tMlqEo', title: "The Baker's Son — TFC TV Segment (with GELO)",         description: "TV segment · The Filipino Channel",                          role: 'Full Production · Media Planning & Buying' },
+  { type: 'youtube', youtubeId: '',             title: 'Goldilocks USA — "By the Way" Facebook Live Segment', description: 'Facebook Live stream · Hosted segment with GELO · TFC',     role: 'Media Planning & Buying' },
+  { type: 'youtube', youtubeId: '',             title: 'Goldilocks USA — Holiday Gift Baskets Segment',       description: 'TV news segment · KRON4 · goldilocks-usa.com promotion',    role: 'Media Planning & Buying' },
+  { type: 'youtube', youtubeId: '',             title: "The Baker's Son — Gift Basket Feature",               description: "TV segment featuring the Baker's Son product line · TFC / BUSA", role: 'Media Planning & Buying' },
+  { type: 'youtube', youtubeId: '',             title: "The Baker's Son — BRG 'Our Daily Bread' Feature",     description: 'Community TV segment feature',                               role: 'Media Planning & Buying' },
 ]
 
 /* ── CONTENT PRODUCTION — MAN ON THE STREET ────────────────────────────── */

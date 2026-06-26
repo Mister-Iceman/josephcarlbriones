@@ -47,6 +47,20 @@ export const galleryASAP: GalleryImage[] = [
   },
 ]
 
+/* ── On-Ground Activations ────────────────────────────────────────────── */
+export const galleryActivations: GalleryImage[] = [
+  {
+    src: '/images/case-studies/activations-worldremit-independence-day.jpg',
+    alt: 'WorldRemit Independence Day activation — branded booth with Filipino community attendees',
+    caption: 'WorldRemit — Philippine Independence Day activation · community event sponsorship',
+  },
+  {
+    src: '/images/case-studies/activations-ding-tfc-concert.jpg',
+    alt: 'Ding.com activation at TFC concert — branded experiential marketing setup',
+    caption: 'Ding.com — TFC concert activation · experiential marketing',
+  },
+]
+
 /* ── The Baker's Son ──────────────────────────────────────────────────── */
 export const galleryBakersSon: GalleryImage[] = [
   {
