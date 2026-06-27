@@ -127,14 +127,26 @@ export default function PlatformsPage() {
                 </a>
               </div>
 
-              {/* Right: live site preview */}
+              {/* Right: screenshot + stats */}
               <div>
-                <SitePreview
-                  url={v.url}
-                  title={v.url.replace('https://', '')}
-                  description={v.tagline}
-                  visitLabel={`Visit ${v.name.split('.')[0]}`}
-                />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <a
+                  href={v.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="platform-screenshot-link"
+                  aria-label={`Visit ${v.name} (opens in new tab)`}
+                >
+                  <img
+                    src={`/images/platforms/${v.id}-homepage.jpg`}
+                    alt={`${v.name} homepage — ${v.tagline}`}
+                    className="platform-screenshot-img"
+                  />
+                  <span className="platform-screenshot-overlay">
+                    Visit {v.name} →
+                    <span className="sr-only">(opens in new tab)</span>
+                  </span>
+                </a>
                 {/* Stats below preview */}
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px', marginTop: '16px' }}>
                   {v.stats.map((stat) => (
