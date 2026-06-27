@@ -106,7 +106,7 @@ export default function VenturesTeaser() {
         {/* CTA */}
         <div style={{ textAlign: 'center', marginTop: '40px' }}>
           <Link
-            href="/ventures"
+            href="/platforms"
             style={{
               display: 'inline-flex',
               alignItems: 'center',

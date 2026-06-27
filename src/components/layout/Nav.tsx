@@ -10,9 +10,9 @@ import { Button } from '@/components/ui/button'
 const navLinks = [
   { href: '/work', label: 'Work' },
   { href: '/about', label: 'About' },
-  { href: '/ventures', label: 'Ventures' },
+  { href: '/platforms', label: 'Platforms' },
   { href: '/awards', label: 'Awards' },
-  { href: '/consulting', label: 'Consulting' },
+  { href: '/contact', label: 'Contact' },
 ]
 
 export default function Nav() {
@@ -41,6 +41,7 @@ export default function Nav() {
       }}
     >
       <nav
+        aria-label="Main navigation"
         style={{
           maxWidth: '1200px',
           margin: '0 auto',
@@ -52,28 +53,17 @@ export default function Nav() {
         }}
       >
         {/* Logo */}
-        <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
+        <Link href="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
           <span
             style={{
-              fontSize: '1.25rem',
-              fontWeight: 700,
-              color: '#4F8EF7',
-              letterSpacing: '-0.02em',
-              fontFamily: 'monospace',
-            }}
-          >
-            JCB
-          </span>
-          <span
-            style={{
-              fontSize: '0.875rem',
+              fontFamily: 'var(--font-space-grotesk), sans-serif',
+              fontSize: '1rem',
               fontWeight: 500,
-              color: '#F5F5F3',
-              display: 'none',
+              color: '#F4F6FA',
+              letterSpacing: '-0.01em',
             }}
-            className="hidden md:inline"
           >
-            Joseph Carl Briones
+            Joseph Carl R. Briones
           </span>
         </Link>
 
@@ -140,7 +130,8 @@ export default function Nav() {
               display: 'flex',
               alignItems: 'center',
             }}
-            aria-label="Open menu"
+            aria-label="Open navigation menu"
+            aria-expanded={open}
           >
             <Menu size={22} />
           </SheetTrigger>
@@ -156,7 +147,7 @@ export default function Nav() {
               <div style={{ marginBottom: '24px' }}>
                 <span style={{ fontSize: '1.1rem', fontWeight: 700, color: '#4F8EF7' }}>JCB</span>
                 <span style={{ fontSize: '0.875rem', color: 'rgba(245,245,243,0.6)', marginLeft: '8px' }}>
-                  Joseph Carl Briones
+                  Joseph Carl R. Briones
                 </span>
               </div>
               {navLinks.map((link) => (

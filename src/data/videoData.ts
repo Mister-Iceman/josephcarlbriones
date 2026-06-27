@@ -33,6 +33,8 @@ export const videosDigitalCampaigns: VideoEntry[] = [
     description: 'Award-winning Facebook Live campaign · December 2018 · 500K+ global viewers',
     role: 'Campaign Strategy · Team Lead · Project Management · ABS-CBN / TFC',
   },
+  { type: 'youtube', youtubeId: 'wiZfB517o3I', title: "New Yorkers Try Ensaymada for the First Time!",      description: "Goldilocks USA · Man on the Street · Times Square, NYC",        role: 'Full Content Production' },
+  { type: 'youtube', youtubeId: 'QwGG7gk37xk', title: "Strangers in LA Try Ensaymada for the First Time",   description: "Goldilocks USA · Man on the Street · Hollywood Walk of Fame, LA", role: 'Full Content Production' },
 ]
 
 /* ── TV COMMERCIALS: confirmed IDs defined first, then assembled ─────────── */
@@ -86,11 +88,8 @@ export const videosTVSegments: VideoEntry[] = [
   { type: 'youtube', youtubeId: 'KaWd2tMlqEo', title: "The Baker's Son — TFC TV Segment (with GELO)", description: 'TV segment · The Filipino Channel',           role: 'Full Production · Media Planning & Buying' },
 ]
 
-/* ── CONTENT PRODUCTION — MAN ON THE STREET ────────────────────────────── */
-export const videosContentProduction: VideoEntry[] = [
-  { type: 'youtube', youtubeId: 'wiZfB517o3I', title: "New Yorkers Try Ensaymada for the First Time!",      description: "Goldilocks USA · Man on the Street · Times Square, NYC",        role: 'Full Content Production' },
-  { type: 'youtube', youtubeId: 'QwGG7gk37xk', title: "Strangers in LA Try Ensaymada for the First Time",   description: "Goldilocks USA · Man on the Street · Hollywood Walk of Fame, LA", role: 'Full Content Production' },
-]
+/* ── CONTENT PRODUCTION ─────────────────────────────────────────────────── */
+export const videosContentProduction: VideoEntry[] = []
 
 /* ── CONVENIENCE EXPORTS: by case study slug ────────────────────────────── */
 export const videos3AF: VideoEntry[] = [
@@ -103,5 +102,5 @@ export const videosASAP: VideoEntry[] = []
 export const videosGoldilocks: VideoEntry[] = [
   ..._goldilocksPlaceholderTVCs,
   ...videosTVSegments.filter((v) => v.title.includes('Goldilocks')),
-  ...videosContentProduction,
+  ...videosDigitalCampaigns.filter((v) => v.title.includes('Ensaymada')),
 ]

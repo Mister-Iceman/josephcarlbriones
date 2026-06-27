@@ -45,11 +45,13 @@ export default function CaseStudyGallery({ images, title }: CaseStudyGalleryProp
               target="_blank"
               rel="noopener noreferrer"
               className="cs-gallery__item"
-              aria-label={`View ${img.alt} on Facebook (opens in new tab)`}
+              aria-label={`${img.linkUrl?.includes('youtube') ? 'Watch on YouTube' : 'View on Facebook'}: ${img.alt} (opens in new tab)`}
             >
               <div className="cs-gallery__img-wrap">
                 <ImageWithFallback src={img.src} alt={img.alt} width={600} height={400} />
-                <span className="cs-gallery__ext-badge" aria-hidden="true">View on Facebook</span>
+                <span className="cs-gallery__ext-badge" aria-hidden="true">
+                  {img.linkUrl?.includes('youtube') ? 'Watch on YouTube' : 'View on Facebook'}
+                </span>
               </div>
               {img.caption && <p className="cs-gallery__caption">{img.caption}</p>}
             </a>

@@ -1,10 +1,11 @@
 import type { Metadata } from 'next'
-import { CheckCircle2 } from 'lucide-react'
+import Link from 'next/link'
+import { CheckCircle2, ArrowRight } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'Joseph Carl Briones \u2014 20+ years in marketing, broadcast media, advertising, and digital platform development. Los Angeles-based. Bilingual English/Tagalog.',
+    'Joseph Carl R. Briones \u2014 20+ years in marketing, broadcast media, advertising, and digital platform development. Los Angeles-based. Bilingual English/Tagalog.',
 }
 
 const timeline = [
@@ -14,6 +15,7 @@ const timeline = [
     org: 'Founder \u2014 FilipinoFoodNearMe.org & FilipinoEventsNearMe.org',
     location: 'Los Angeles, CA',
     notes: null,
+    bullets: null,
   },
   {
     period: 'Oct 2019 \u2013 May 2023',
@@ -21,6 +23,13 @@ const timeline = [
     org: 'JCB Strategic Media LLC',
     location: 'Los Angeles, CA',
     notes: null,
+    bullets: [
+      'Led integrated campaigns for The Baker\u2019s Son by Valerio\u2019s (brand launch + broadcast), Goldilocks USA (national media buy), and Martin Purefoods (campaign management).',
+      'Served as principal consultant for michaelwernecke.com \u2014 brand architecture, content strategy, and digital presence development.',
+      'Executed digital strategy for Westates Automotive Group, including digital ad placements and regional audience targeting.',
+      'Managed media budgets across linear TV, out-of-home, and digital channels for multicultural-focused campaigns.',
+      'Leveraged AI-assisted workflows and platform development tools to deliver strategic value at reduced cost vs. traditional agency models.',
+    ],
   },
   {
     period: '2021',
@@ -28,6 +37,7 @@ const timeline = [
     org: 'Westates Marketing & Automotive Promotions',
     location: 'Los Angeles, CA',
     notes: null,
+    bullets: null,
   },
   {
     period: 'August 2020 \u2013 October 2020',
@@ -35,6 +45,7 @@ const timeline = [
     org: 'U.S. Census Bureau',
     location: 'Los Angeles, CA',
     notes: null,
+    bullets: null,
   },
   {
     period: 'May 2009 \u2013 September 2019',
@@ -42,6 +53,7 @@ const timeline = [
     org: 'ABS-CBN International / The Filipino Channel (TFC)',
     location: 'Greater Los Angeles Area',
     notes: '10 years, 5 months',
+    bullets: null,
   },
   {
     period: '2008',
@@ -50,7 +62,26 @@ const timeline = [
     location: 'Greater Los Angeles Area',
     notes:
       'Clients: Sony Pictures Entertainment \u2014 The House Bunny, Underworld: Rise of the Lycans, Seven Pounds, Pink Panther 2, Lakeview Terrace, Mardi Gras, The International',
+    bullets: null,
   },
+]
+
+const jcbClients = [
+  "The Baker's Son by Valerio's",
+  'Goldilocks USA',
+  'Martin Purefoods',
+  'Westates Automotive Group',
+  'michaelwernecke.com',
+]
+
+const consultingServices = [
+  'Marketing & Advertising Strategy',
+  'Campaign Planning & Coordination',
+  'Social Media Planning & Content Systems',
+  'Website Strategy & Digital Presence',
+  'AI-Assisted Content Workflows',
+  'Multicultural Audience Outreach & Messaging',
+  'Small Business Visibility Support',
 ]
 
 const competencies = [
@@ -87,7 +118,7 @@ export default function AboutPage() {
             About
           </p>
           <h1 className="display-lg" style={{ color: '#F5F5F3', margin: '0 0 12px' }}>
-            Joseph Carl Briones
+            Joseph Carl R. Briones
           </h1>
           <p
             style={{
@@ -249,12 +280,61 @@ export default function AboutPage() {
                       {item.notes}
                     </p>
                   )}
+                  {item.bullets && (
+                    <ul style={{ margin: '8px 0 0', padding: '0 0 0 16px', display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                      {item.bullets.map((bullet, j) => (
+                        <li key={j} style={{ fontSize: '0.8125rem', color: 'rgba(245,245,243,0.55)', lineHeight: 1.6 }}>
+                          {bullet}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
               </div>
             ))}
           </div>
-        </div>
 
+          {/* Selected JCB Strategic Media Clients */}
+          <div
+            style={{
+              marginTop: '8px',
+              padding: '24px',
+              backgroundColor: 'rgba(79,142,247,0.04)',
+              border: '0.5px solid rgba(79,142,247,0.18)',
+              borderRadius: '8px',
+            }}
+          >
+            <p
+              style={{
+                fontSize: '0.6875rem',
+                fontWeight: 600,
+                letterSpacing: '0.1em',
+                textTransform: 'uppercase',
+                color: 'rgba(245,245,243,0.35)',
+                margin: '0 0 14px',
+              }}
+            >
+              Selected JCB Strategic Media Clients
+            </p>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+              {jcbClients.map((client) => (
+                <span
+                  key={client}
+                  style={{
+                    fontSize: '0.8125rem',
+                    color: 'rgba(245,245,243,0.65)',
+                    backgroundColor: 'rgba(255,255,255,0.04)',
+                    border: '0.5px solid rgba(255,255,255,0.1)',
+                    borderRadius: '4px',
+                    padding: '5px 12px',
+                  }}
+                >
+                  {client}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Competencies */}
@@ -290,7 +370,6 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-
       </section>
 
       {/* Education */}
@@ -304,37 +383,147 @@ export default function AboutPage() {
               style={{
                 padding: '20px 24px',
                 backgroundColor: 'rgba(255,255,255,0.03)',
-                border: '1px solid rgba(255,255,255,0.06)',
-                borderRadius: '10px',
+                border: '0.5px solid rgba(91,151,255,0.18)',
+                borderRadius: '8px',
               }}
             >
-              <p style={{ fontSize: '0.9375rem', fontWeight: 600, color: '#F5F5F3', margin: '0 0 4px' }}>
-                San Beda University
+              <p style={{ fontSize: '0.9375rem', fontWeight: 600, color: 'var(--jcb-white)', margin: '0 0 4px' }}>
+                San Beda University &middot; Manila, Philippines
               </p>
-              <p style={{ fontSize: '0.875rem', color: '#4F8EF7', margin: '0 0 4px' }}>
-                Bachelor&apos;s Degree, Management
+              <p style={{ fontSize: '0.875rem', color: 'var(--jcb-blue-bright)', margin: '0 0 4px' }}>
+                Bachelor of Science in Management &middot; 1996
               </p>
-              <p style={{ fontSize: '0.8125rem', color: 'rgba(245,245,243,0.45)', margin: 0 }}>Philippines</p>
             </div>
             <div
               style={{
                 padding: '20px 24px',
-                backgroundColor: 'rgba(255,255,255,0.03)',
-                border: '1px solid rgba(255,255,255,0.06)',
-                borderRadius: '10px',
+                backgroundColor: 'rgba(43,110,219,0.06)',
+                border: '0.5px solid var(--jcb-blue-mid)',
+                borderRadius: '8px',
               }}
             >
-              <p style={{ fontSize: '0.9375rem', fontWeight: 600, color: '#F5F5F3', margin: '0 0 4px' }}>
+              <p style={{ fontSize: '0.9375rem', fontWeight: 600, color: 'var(--jcb-white)', margin: '0 0 4px' }}>
                 WES International Academic Credential Evaluation
               </p>
-              <p style={{ fontSize: '0.875rem', color: '#4F8EF7', margin: '0 0 4px' }}>
-                World Education Services (WES) &middot; 2024
+              <p style={{ fontSize: '0.875rem', color: 'var(--jcb-blue-bright)', margin: '0 0 8px' }}>
+                World Education Services (WES) &middot; November 2024
               </p>
-              <p style={{ fontSize: '0.8125rem', color: 'rgba(245,245,243,0.45)', margin: 0 }}>
-                WES-verified for U.S. employment equivalency
+              <p style={{ fontSize: '0.8125rem', color: 'var(--jcb-gray-200)', margin: 0 }}>
+                WES-evaluated equivalent to a bachelor&apos;s degree from a regionally accredited U.S. institution.
+                Reference #6631434/lwd &middot; November 2024.
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Consulting & Freelance Work */}
+      <section style={{ padding: '80px 24px', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
+        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+          <p className="eyebrow" style={{ color: '#4F8EF7', marginBottom: '32px' }}>
+            Consulting & Freelance Work
+          </p>
+
+          <p className="body-lg" style={{ color: 'rgba(245,245,243,0.6)', margin: '0 0 32px' }}>
+            Available for marketing strategy, campaign coordination, digital presence, and multicultural outreach
+            projects. Serving small to mid-size businesses, startups, community organizations, and brands
+            reaching Filipino-American &amp; Asian-American audiences.
+          </p>
+
+          {/* Services */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '40px' }}>
+            {consultingServices.map((service) => (
+              <div
+                key={service}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '12px',
+                  padding: '12px 16px',
+                  backgroundColor: 'rgba(255,255,255,0.03)',
+                  border: '1px solid rgba(255,255,255,0.06)',
+                  borderRadius: '8px',
+                }}
+              >
+                <CheckCircle2 size={15} style={{ color: '#4F8EF7', flexShrink: 0 }} />
+                <span style={{ fontSize: '0.875rem', color: 'rgba(245,245,243,0.75)' }}>{service}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* Recent Client Work */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
+            <div
+              style={{
+                padding: '20px 24px',
+                backgroundColor: 'rgba(255,255,255,0.03)',
+                border: '0.5px solid rgba(91,151,255,0.18)',
+                borderRadius: '8px',
+              }}
+            >
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '12px', marginBottom: '6px' }}>
+                <h3 style={{ fontSize: '0.9375rem', fontWeight: 600, color: '#F5F5F3', margin: 0 }}>
+                  michaelwernecke.com
+                </h3>
+                <span style={{ fontSize: '0.8125rem', color: 'rgba(245,245,243,0.35)', whiteSpace: 'nowrap' }}>2022 &ndash; 2023</span>
+              </div>
+              <p style={{ fontSize: '0.8125rem', color: '#4F8EF7', margin: '0 0 8px', fontWeight: 500 }}>
+                Brand Architecture &middot; Content Strategy &middot; Digital Presence
+              </p>
+              <p className="body-sm" style={{ color: 'rgba(245,245,243,0.55)', margin: '0 0 12px' }}>
+                Principal consultant for Michael Wernecke&apos;s personal brand site &mdash; brand architecture,
+                content strategy, and full digital presence development.
+              </p>
+              <a
+                href="https://www.michaelwernecke.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ display: 'inline-flex', alignItems: 'center', gap: '4px', fontSize: '0.8125rem', color: '#4F8EF7', textDecoration: 'none' }}
+              >
+                Visit site <ArrowRight size={13} />
+              </a>
+            </div>
+            <div
+              style={{
+                padding: '20px 24px',
+                backgroundColor: 'rgba(255,255,255,0.02)',
+                border: '0.5px solid rgba(255,255,255,0.08)',
+                borderRadius: '8px',
+              }}
+            >
+              <p style={{ fontSize: '0.9375rem', fontWeight: 500, color: '#F5F5F3', margin: '0 0 6px' }}>
+                JCB Strategic Media Engagements &mdash; 2019&ndash;2023
+              </p>
+              <p className="body-sm" style={{ color: 'rgba(245,245,243,0.5)', margin: '0 0 12px' }}>
+                Brand launch campaigns, national media buys, and integrated digital campaigns for The Baker&apos;s Son
+                by Valerio&apos;s, Goldilocks USA, Martin Purefoods, and Westates Automotive Group.
+              </p>
+              <Link
+                href="/work"
+                style={{ display: 'inline-flex', alignItems: 'center', gap: '4px', fontSize: '0.8125rem', color: '#4F8EF7', textDecoration: 'none' }}
+              >
+                View case studies <ArrowRight size={13} />
+              </Link>
+            </div>
+          </div>
+
+          {/* CTA */}
+          <Link href="/contact?as=consulting-client">
+            <button
+              style={{
+                backgroundColor: '#4F8EF7',
+                color: '#ffffff',
+                border: 'none',
+                borderRadius: '9999px',
+                padding: '12px 28px',
+                fontSize: '0.9375rem',
+                fontWeight: 500,
+                cursor: 'pointer',
+              }}
+            >
+              Tell me about your project
+            </button>
+          </Link>
         </div>
       </section>
 

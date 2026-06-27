@@ -16,6 +16,7 @@ export const gallery3AF: GalleryImage[] = [
     src: '/images/awards/3af-ceremony.jpg',
     alt: 'Award ceremony acknowledgment at the 3AF 2018 Excellence Awards',
     caption: 'Award ceremony — 3AF 2018 Excellence Awards, June 6, 2018',
+    linkUrl: 'https://www.youtube.com/watch?v=4HUlDijjiEE',
   },
   {
     src: '/images/case-studies/3af-impact.jpg',
@@ -26,6 +27,7 @@ export const gallery3AF: GalleryImage[] = [
     src: '/images/case-studies/3af-live-performance.jpg',
     alt: 'Live caroling performance on The Filipino Channel, Christmas 2018',
     caption: 'Live caroling broadcast — connecting Filipino diaspora audiences globally',
+    linkUrl: 'https://www.youtube.com/watch?v=5ji1iN0RbfU',
   },
 ]
 
