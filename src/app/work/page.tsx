@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     'Case studies spanning 20+ years: digital campaigns, live events, brand launches, community platforms, and public service. Joseph Carl R. Briones portfolio.',
 }
 
-const filterTabs = ['All', 'Digital', 'Social Media', 'Events', 'Brand Launch', 'Platform', 'Public Service']
+const filterTabs = ['All', 'Case Studies', 'Campaign Work', 'Digital', 'Live Event', 'Brand', 'Platform', 'Public Sector', 'Social Media']
 
 export default function WorkPage() {
   return (
@@ -27,9 +27,9 @@ export default function WorkPage() {
           <h1 className="display-lg" style={{ color: '#F5F5F3', margin: '0 0 16px' }}>
             Selected Work
           </h1>
-          <p className="body-lg" style={{ color: 'rgba(245,245,243,0.55)', maxWidth: '520px', margin: 0 }}>
-            Campaigns, brand launches, digital platforms, and live events spanning 20+ years of marketing,
-            media, and community building.
+          <p className="body-lg" style={{ color: 'rgba(245,245,243,0.55)', maxWidth: '600px', margin: 0 }}>
+            Five documented case studies and seven campaign work samples across digital campaigns, live events,
+            brand launches, founder-built platforms, and public sector field operations.
           </p>
         </div>
       </section>

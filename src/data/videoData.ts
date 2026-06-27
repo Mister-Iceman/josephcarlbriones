@@ -26,9 +26,9 @@ export const videosAwardRecognition: VideoEntry[] = [
 /* ── DIGITAL CAMPAIGNS ──────────────────────────────────────────────────── */
 export const videosDigitalCampaigns: VideoEntry[] = [
   {
-    type: 'facebook',
+    type: 'youtube',
+    youtubeId: '5ji1iN0RbfU',
     facebookUrl: 'https://www.facebook.com/reel/1630410013684053/?s=single_unit',
-    youtubeId: '',
     title: '12 Days of Filipino Christmas Caroling — Remitly × TFC',
     description: 'Award-winning Facebook Live campaign · December 2018 · 500K+ global viewers',
     role: 'Campaign Strategy · Team Lead · Project Management · ABS-CBN / TFC',

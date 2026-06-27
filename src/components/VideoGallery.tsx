@@ -145,6 +145,17 @@ function VideoCard({ video }: { video: VideoEntry }) {
               allowFullScreen
               title={video.title}
             />
+            {video.facebookUrl && (
+              <a
+                href={video.facebookUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cs-video__lightbox-fb-link"
+              >
+                View original on Facebook →
+                <span className="sr-only">(opens in new tab)</span>
+              </a>
+            )}
             <button className="cs-video-lightbox__close" onClick={close}>
               ✕ Close
             </button>

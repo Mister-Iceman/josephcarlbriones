@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import VideoGallery from '@/components/VideoGallery'
 import {
@@ -167,6 +167,14 @@ const videoSections = [
 /* ─── Component ──────────────────────────────────────────────────────────── */
 export default function PortfolioClient() {
   const [activeCategory, setActiveCategory] = useState<CategoryId>('all')
+  const [lightboxImage, setLightboxImage] = useState<{ src: string; alt: string } | null>(null)
+
+  useEffect(() => {
+    if (!lightboxImage) return
+    const handler = (e: KeyboardEvent) => { if (e.key === 'Escape') setLightboxImage(null) }
+    window.addEventListener('keydown', handler)
+    return () => window.removeEventListener('keydown', handler)
+  }, [lightboxImage])
 
   const visibleVideoSections = videoSections.filter(
     (s) => activeCategory === 'all' || activeCategory === s.id,
@@ -227,7 +235,11 @@ export default function PortfolioClient() {
             </p>
             <div className="portfolio-items-grid">
               {visibleItems.map((item, i) => (
-                <PortfolioItemCard key={i} item={item} />
+                <PortfolioItemCard
+                  key={i}
+                  item={item}
+                  onImageClick={(src, alt) => setLightboxImage({ src, alt })}
+                />
               ))}
             </div>
           </section>
@@ -237,22 +249,60 @@ export default function PortfolioClient() {
           <p className="portfolio-empty">No items in this category yet.</p>
         )}
       </div>
+
+      {/* Image lightbox */}
+      {lightboxImage && (
+        <div
+          className="portfolio-lightbox"
+          onClick={() => setLightboxImage(null)}
+          role="dialog"
+          aria-modal="true"
+          aria-label={lightboxImage.alt}
+        >
+          <button
+            className="portfolio-lightbox__close"
+            onClick={() => setLightboxImage(null)}
+            aria-label="Close image"
+          >
+            ✕ Close
+          </button>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={lightboxImage.src}
+            alt={lightboxImage.alt}
+            className="portfolio-lightbox__img"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
     </main>
   )
 }
 
 /* ─── Portfolio Item Card ─────────────────────────────────────────────────── */
-function PortfolioItemCard({ item }: { item: PortfolioItem }) {
+function PortfolioItemCard({
+  item,
+  onImageClick,
+}: {
+  item: PortfolioItem
+  onImageClick?: (src: string, alt: string) => void
+}) {
   return (
     <div className="portfolio-card">
       {item.imageThumb && (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          src={item.imageThumb}
-          alt=""
-          aria-hidden="true"
-          className="portfolio-card__thumb-img"
-        />
+        <button
+          className="portfolio-card__thumb-btn"
+          onClick={() => onImageClick?.(item.imageThumb!, item.title)}
+          aria-label={`View larger: ${item.title}`}
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={item.imageThumb}
+            alt=""
+            aria-hidden="true"
+            className="portfolio-card__thumb-img"
+          />
+        </button>
       )}
 
       {item.externalUrl ? (

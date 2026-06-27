@@ -73,6 +73,10 @@ export default async function CaseStudyPage({ params }: Props) {
             Work
           </Link>
           <span>/</span>
+          <span style={{ color: 'rgba(245,245,243,0.35)' }}>
+            {cs.type === 'portfolio-work' ? 'Campaign Work' : 'Case Study'}
+          </span>
+          <span>/</span>
           <span style={{ color: 'rgba(245,245,243,0.5)' }}>{cs.title}</span>
         </div>
       </div>

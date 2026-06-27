@@ -22,11 +22,13 @@ export interface CaseStudy {
   demonstrates: string
   role?: string
   pdfPath?: string
+  type?: 'case-study' | 'portfolio-work'
 }
 
 export const caseStudies: CaseStudy[] = [
   {
     slug: '3af-digital-campaign-of-the-year',
+    type: 'case-study',
     title: '3AF Digital Campaign of the Year \u2014 Remitly \u00d7 TFC',
     client: 'Remitly \u00d7 The Filipino Channel (TFC)',
     category: 'Digital Campaign \u00b7 Partnership Marketing',
@@ -57,6 +59,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: 'asap-live-ny-barclays-center',
+    type: 'case-study',
     title: 'ASAP Live NY \u2014 Barclays Center',
     client: 'ABS-CBN International / The Filipino Channel',
     category: 'Event Sponsorship \u00b7 Live Event Marketing',
@@ -86,6 +89,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: 'the-bakers-son-brand-launch',
+    type: 'case-study',
     title: "The Baker\u2019s Son \u2014 Brand Launch",
     client: "The Baker\u2019s Son by Valerio\u2019s",
     category: 'Brand Launch \u00b7 Integrated Campaign',
@@ -114,6 +118,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: 'goldilocks-usa-media-campaign',
+    type: 'portfolio-work',
     title: 'Goldilocks USA \u2014 Media Campaign',
     client: 'Goldilocks USA',
     category: 'Media Planning & Buying \u00b7 TV Production',
@@ -140,9 +145,10 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: 'martin-purefoods-digital-social',
+    type: 'portfolio-work',
     title: 'Martin Purefoods — Digital & Social Campaign',
     client: 'Martin Purefoods Corporation',
-    category: 'Digital Campaign · Social Media · TV Production',
+    category: 'Campaign Work · Full TVC Production · Social Media Management',
     year: '2021–2022',
     award: null,
     featured: false,
@@ -166,6 +172,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: 'filipinofoodnearme-platform',
+    type: 'case-study',
     title: 'FilipinoFoodNearMe.org',
     client: 'Self-Founded \u00b7 FilAm Network',
     category: 'Digital Platform \u00b7 Community Product',
@@ -193,6 +200,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: 'filipinoeventsnearme-platform',
+    type: 'case-study',
     title: 'FilipinoEventsNearMe.org',
     client: 'Self-Founded \u00b7 FilAm Network',
     category: 'Digital Platform \u00b7 Community Calendar',
@@ -220,6 +228,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: 'us-census-bureau-field-operations',
+    type: 'case-study',
     title: 'U.S. Census Bureau \u2014 Field Operations',
     client: 'U.S. Census Bureau (Federal Government)',
     category: 'Public Service \u00b7 Field Data Collection',

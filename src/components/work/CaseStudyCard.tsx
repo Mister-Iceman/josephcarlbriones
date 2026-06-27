@@ -18,20 +18,39 @@ export default function CaseStudyCard({ cs }: Props) {
           flexDirection: 'column',
         }}
       >
-        {/* Category + Award row */}
+        {/* Type badge + Category + Award row */}
         <div
           style={{
             display: 'flex',
-            alignItems: 'center',
+            alignItems: 'flex-start',
             justifyContent: 'space-between',
             marginBottom: '16px',
             flexWrap: 'wrap',
             gap: '8px',
           }}
         >
-          <span className="eyebrow" style={{ color: '#4F8EF7' }}>
-            {cs.category}
-          </span>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+            <span
+              style={{
+                display: 'inline-block',
+                alignSelf: 'flex-start',
+                fontSize: '0.625rem',
+                fontWeight: 600,
+                letterSpacing: '0.08em',
+                textTransform: 'uppercase',
+                color: cs.type === 'portfolio-work' ? 'rgba(245,245,243,0.4)' : '#4F8EF7',
+                backgroundColor: cs.type === 'portfolio-work' ? 'rgba(255,255,255,0.05)' : 'rgba(79,142,247,0.1)',
+                border: cs.type === 'portfolio-work' ? '0.5px solid rgba(255,255,255,0.1)' : '0.5px solid rgba(79,142,247,0.25)',
+                borderRadius: '3px',
+                padding: '2px 6px',
+              }}
+            >
+              {cs.type === 'portfolio-work' ? 'Campaign Work' : 'Case Study'}
+            </span>
+            <span className="eyebrow" style={{ color: '#4F8EF7' }}>
+              {cs.category}
+            </span>
+          </div>
           {cs.award && (
             <span
               style={{
@@ -130,7 +149,7 @@ export default function CaseStudyCard({ cs }: Props) {
             fontWeight: 500,
           }}
         >
-          Read case study <ArrowRight size={14} />
+          {cs.type === 'portfolio-work' ? 'View campaign work' : 'Read case study'} <ArrowRight size={14} />
         </div>
       </article>
     </Link>
