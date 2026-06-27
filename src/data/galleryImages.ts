@@ -2,6 +2,7 @@ export interface GalleryImage {
   src: string
   alt: string
   caption?: string
+  linkUrl?: string
 }
 
 /* ── 3AF / Remitly × TFC ──────────────────────────────────────────────── */
@@ -58,6 +59,28 @@ export const galleryActivations: GalleryImage[] = [
     src: '/images/case-studies/activations-ding-tfc-concert.jpg',
     alt: 'Ding.com activation at TFC concert — branded experiential marketing setup',
     caption: 'Ding.com — TFC concert activation · experiential marketing',
+  },
+]
+
+/* ── Martin Purefoods — Social Media ─────────────────────────────────── */
+export const galleryMartinSocial: GalleryImage[] = [
+  {
+    src: '/images/case-studies/martin-social-lumpia-day.jpg',
+    alt: 'Martin Purefoods Happy National Lumpia Day social media post on Facebook',
+    caption: 'National Lumpia Day campaign post',
+    linkUrl: 'https://www.facebook.com/martinpurefoodscorp/posts/pfbid0outTmK9Nt1gNPvbBjiLuWdL4zxXUk3xivvNzHm2mKnwffsEf7gFhiYCRDHwMmTrgl',
+  },
+  {
+    src: '/images/case-studies/martin-social-4th-of-july.jpg',
+    alt: 'Martin Purefoods 4th of July BBQ Time social media campaign content',
+    caption: '4th of July campaign content',
+    linkUrl: 'https://www.facebook.com/martinpurefoodscorp/videos/1211272505966432',
+  },
+  {
+    src: '/images/case-studies/martin-social-gameday.jpg',
+    alt: 'Martin Purefoods Game Day Sunday Super Bowl social media post',
+    caption: 'Game Day Sunday · Super Bowl content',
+    linkUrl: 'https://www.facebook.com/martinpurefoodscorp/posts/pfbid029JeFGbAG9z8ZkrjGF25qUDS8J6cLpvPS269LdLCyuxkc6CWVWjGrFCbw1SfKSqY7l',
   },
 ]
 

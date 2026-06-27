@@ -1369,3 +1369,17 @@
   padding: 0;
   width: 100%;
 }
+
+/* External-link badge on gallery images (e.g. Facebook post links) */
+.cs-gallery__ext-badge {
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  background: rgba(9,14,26,0.8);
+  color: var(--jcb-blue-bright);
+  font-size: 10px;
+  font-weight: 500;
+  padding: 3px 8px;
+  border-radius: 2px;
+  pointer-events: none;
+}

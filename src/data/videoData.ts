@@ -27,7 +27,7 @@ export const videosAwardRecognition: VideoEntry[] = [
 export const videosDigitalCampaigns: VideoEntry[] = [
   {
     type: 'facebook',
-    facebookUrl: 'https://www.facebook.com/reel/1630410013684053',
+    facebookUrl: 'https://www.facebook.com/reel/1630410013684053/?s=single_unit',
     youtubeId: '',
     title: '12 Days of Filipino Christmas Caroling — Remitly × TFC',
     description: 'Award-winning Facebook Live campaign · December 2018 · 500K+ global viewers',
@@ -81,11 +81,9 @@ export const videosTVCs: VideoEntry[] = [
 
 /* ── TV SEGMENTS ────────────────────────────────────────────────────────── */
 export const videosTVSegments: VideoEntry[] = [
-  { type: 'youtube', youtubeId: 'wooTeJJ0B0Q', title: 'Goldilocks USA — KRON4 News Feature',          description: 'TV news segment · KRON4',                   role: 'Media Planning & Buying' },
+  { type: 'youtube', youtubeId: 'wooTeJJ0B0Q', title: 'Goldilocks USA — Holiday Gift Baskets Feature · KRON4', description: 'TV news segment · KRON4 Bay Area · holiday gift basket promotion', role: 'Media Planning & Buying' },
   { type: 'youtube', youtubeId: 'yQFsyNiwbqg', title: 'Goldilocks USA — TFC TV Segment',              description: 'TV segment · The Filipino Channel',           role: 'Media Planning & Buying' },
   { type: 'youtube', youtubeId: 'KaWd2tMlqEo', title: "The Baker's Son — TFC TV Segment (with GELO)", description: 'TV segment · The Filipino Channel',           role: 'Full Production · Media Planning & Buying' },
-  // ID pending — check YouTube Studio unlisted uploads
-  { type: 'youtube', youtubeId: '',             title: 'Goldilocks USA — Holiday Gift Baskets Feature · KRON4', description: 'TV news segment · KRON4 Bay Area · holiday gift basket promotion', role: 'Media Planning & Buying' },
 ]
 
 /* ── CONTENT PRODUCTION — MAN ON THE STREET ────────────────────────────── */

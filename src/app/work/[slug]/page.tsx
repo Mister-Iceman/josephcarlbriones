@@ -5,7 +5,7 @@ import { Trophy, ArrowLeft, ArrowRight } from 'lucide-react'
 import { caseStudies } from '@/data/caseStudies'
 import CaseStudyGallery from '@/components/CaseStudyGallery'
 import VideoGallery, { type VideoEntry } from '@/components/VideoGallery'
-import { gallery3AF, galleryASAP, galleryActivations, galleryBakersSon, type GalleryImage } from '@/data/galleryImages'
+import { gallery3AF, galleryASAP, galleryActivations, galleryBakersSon, galleryMartinSocial, type GalleryImage } from '@/data/galleryImages'
 import { videos3AF, videosMartin } from '@/data/videoData'
 
 const galleryMap: Record<string, GalleryImage[]> = {
@@ -13,23 +13,7 @@ const galleryMap: Record<string, GalleryImage[]> = {
   'asap-live-ny-barclays-center': galleryASAP,
   'on-ground-activations-jcbsm': galleryActivations,
   'the-bakers-son-brand-launch': galleryBakersSon,
-  'martin-purefoods-digital-social': [
-    {
-      src: '/images/case-studies/martin-social-lumpia-day.jpg',
-      alt: 'Martin Purefoods Happy National Lumpia Day social media post — Facebook',
-      caption: 'Martin Purefoods — National Lumpia Day content · Facebook',
-    },
-    {
-      src: '/images/case-studies/martin-social-4th-of-july.jpg',
-      alt: 'Martin Purefoods BBQ Time — 4th of July social media post',
-      caption: 'Martin Purefoods — 4th of July campaign content',
-    },
-    {
-      src: '/images/case-studies/martin-social-gameday.jpg',
-      alt: 'Martin Purefoods Game Day Sunday Super Bowl social media post',
-      caption: 'Martin Purefoods — Game Day Sunday content · Super Bowl',
-    },
-  ],
+  'martin-purefoods-digital-social': galleryMartinSocial,
 }
 
 const videoMap: Record<string, VideoEntry[]> = {

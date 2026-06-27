@@ -60,7 +60,7 @@ const portfolioItems: PortfolioItem[] = [
     description:
       'Educational social media series covering tax deductions, IRA contributions, child tax credits, EV credits, and bookkeeping services. Targeted to Filipino-American small business owners and families. Platform: Facebook.',
     tags: ['Social Media', 'Education Content', 'Small Business'],
-    imageThumb: '', // image pending screenshot from PDF
+    imageThumb: '/images/portfolio/leano-social.jpg',
   },
   {
     category: 'social',
@@ -69,7 +69,7 @@ const portfolioItems: PortfolioItem[] = [
     description:
       'Facebook social media series for RJB Law Offices (Family Finance Lawyers) targeting Filipino-Americans facing financial distress. Emotional storytelling approach — "Libreng Konsulta" CTA. Serving LA, Orange, San Bernardino, Riverside, and Santa Barbara counties.',
     tags: ['Social Media', 'Legal Services', 'Filipino-American'],
-    imageThumb: '', // image pending screenshot from PDF
+    imageThumb: '/images/portfolio/rjb-social.jpg',
   },
   // Events & Activation
   {
