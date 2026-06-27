@@ -16,7 +16,7 @@ const securityHeaders = [
       "font-src 'self' https://fonts.gstatic.com",
       "img-src 'self' data: https: blob:",
       "connect-src 'self' https://api.resend.com https://*.sentry.io https://vitals.vercel-insights.com https://www.youtube.com",
-      "frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com https://www.facebook.com https://www.filipinofoodnerarme.org https://www.filipinoeventsnerarme.org https://www.michaelwernecke.com",
+      "frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com https://www.facebook.com https://www.filipinofoodnearme.org https://www.filipinoeventsnearme.org https://www.michaelwernecke.com",
       "media-src 'self' https://www.youtube.com blob:",
     ].join('; '),
   },

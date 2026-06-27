@@ -142,7 +142,7 @@ const portfolioItems: PortfolioItem[] = [
     description:
       'National directory of Filipino food businesses across the U.S. 1,200+ listings across 34+ states. Built with Next.js, Tailwind CSS, Vercel, and Claude Code.',
     tags: ['Platform', 'Founder', 'Next.js'],
-    externalUrl: 'https://www.filipinofoodnerarme.org',
+    externalUrl: 'https://www.filipinofoodnearme.org',
   },
   {
     category: 'platforms',
@@ -151,7 +151,7 @@ const portfolioItems: PortfolioItem[] = [
     description:
       'National Filipino-American events calendar. 150+ events across 92+ cities. Built with Next.js, Tailwind CSS, Vercel, and Claude Code.',
     tags: ['Platform', 'Founder', 'Next.js'],
-    externalUrl: 'https://www.filipinoeventsnerarme.org',
+    externalUrl: 'https://www.filipinoeventsnearme.org',
   },
 ]
 
