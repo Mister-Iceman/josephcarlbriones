@@ -1,9 +1,10 @@
 import Link from 'next/link'
 
 const awardPills = [
-  { icon: '\uD83C\uDFC6', label: '3AF Digital Campaign of the Year' },
-  { icon: '\u2B50', label: 'MVP \u2014 Most Outstanding Eventurer' },
-  { icon: '\uD83C\uDFC5', label: 'Agency of the Year in Media \u00d7 2' },
+  { label: '3AF Digital Campaign of the Year' },
+  { label: 'MVP — Most Outstanding Eventurer' },
+  { label: 'Agency of the Year in Media × 2' },
+  { label: 'Walk on Water Award × 2' },
 ]
 
 export default function Hero() {
@@ -13,54 +14,95 @@ export default function Hero() {
         minHeight: '90vh',
         display: 'flex',
         alignItems: 'center',
-        background: 'radial-gradient(ellipse at 30% 40%, rgba(79,142,247,0.06) 0%, transparent 60%), #0A0F1E',
+        background: 'var(--grad-hero)',
         padding: '80px 24px 60px',
+        position: 'relative',
+        overflow: 'hidden',
       }}
     >
-      <div style={{ maxWidth: '1200px', margin: '0 auto', width: '100%' }}>
+      {/* Texture glow overlay */}
+      <div
+        aria-hidden="true"
+        style={{
+          position: 'absolute',
+          inset: 0,
+          background: 'var(--tex-glow)',
+          pointerEvents: 'none',
+        }}
+      />
+
+      {/* Decorative geometry — top right hairline rectangles */}
+      <div
+        aria-hidden="true"
+        style={{ position: 'absolute', top: '80px', right: '40px', pointerEvents: 'none' }}
+      >
+        <div style={{ width: '120px', height: '80px', border: '0.5px solid var(--jcb-border2)', position: 'absolute', top: 0, right: 0 }} />
+        <div style={{ width: '90px', height: '60px', border: '0.5px solid var(--jcb-border)', position: 'absolute', top: 16, right: 16 }} />
+        <div style={{ width: '60px', height: '40px', border: '0.5px solid rgba(255,255,255,0.05)', position: 'absolute', top: 32, right: 32 }} />
+      </div>
+
+      <div style={{ maxWidth: '1200px', margin: '0 auto', width: '100%', position: 'relative', zIndex: 1 }}>
         {/* Eyebrow */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '24px' }}>
-          <div style={{ width: '24px', height: '1px', backgroundColor: '#4F8EF7', flexShrink: 0 }} />
-          <span className="eyebrow" style={{ color: '#4F8EF7' }}>
-            Award-Winning Marketing & Media Professional
+        <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '32px' }}>
+          <div style={{ width: '24px', height: '1px', backgroundColor: 'var(--jcb-blue-bright)', flexShrink: 0 }} />
+          <span
+            style={{
+              fontSize: '0.6875rem',
+              fontWeight: 500,
+              letterSpacing: '0.12em',
+              textTransform: 'uppercase',
+              color: 'var(--jcb-blue-bright)',
+            }}
+          >
+            Marketing Strategist &nbsp;&middot;&nbsp; Los Angeles, CA
           </span>
         </div>
 
-        {/* Name */}
-        <h1 className="display-xl" style={{ color: '#F5F5F3', margin: '0 0 16px' }}>
-          Joseph Carl Briones
+        {/* Display name — two lines */}
+        <h1
+          style={{
+            fontFamily: 'var(--font-space-grotesk), sans-serif',
+            fontSize: 'clamp(2.75rem, 6vw, 4.5rem)',
+            fontWeight: 500,
+            letterSpacing: '-0.02em',
+            lineHeight: 1.05,
+            color: 'var(--jcb-white)',
+            margin: '0 0 0',
+          }}
+        >
+          Joseph Carl R.
+          <br />
+          Briones
         </h1>
 
-        {/* Title */}
-        <p
+        {/* Gradient accent line */}
+        <div
           style={{
-            fontSize: '1rem',
-            color: 'rgba(245,245,243,0.45)',
-            letterSpacing: '0.01em',
-            margin: '0 0 24px',
-            lineHeight: 1.6,
+            width: '48px',
+            height: '2px',
+            background: 'var(--grad-cta)',
+            margin: '20px 0 24px',
           }}
-        >
-          Marketing Strategist &nbsp;&middot;&nbsp; Community Platform Builder &nbsp;&middot;&nbsp; Multicultural Media Professional
-        </p>
+        />
 
-        {/* Bio */}
+        {/* Tagline */}
         <p
-          className="body-lg"
           style={{
-            color: 'rgba(245,245,243,0.6)',
+            fontSize: '0.9375rem',
+            color: 'var(--jcb-gray-200)',
             maxWidth: '560px',
             margin: '0 0 40px',
+            lineHeight: 1.75,
           }}
         >
-          20+ years building meaningful connections between brands, audiences, and communities &mdash; across broadcast
-          media, major advertising agencies, and digital platforms. Award-winning. Bilingual. Los Angeles-based.
+          20+ years building meaningful connections between brands, audiences, and communities — across broadcast
+          media, major advertising agencies, and digital platforms.
         </p>
 
         {/* CTAs */}
-        <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginBottom: '40px' }}>
+        <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginBottom: '48px' }}>
           <Link href="/work" className="btn-primary">
-            View my work &rarr;
+            See my work &rarr;
           </Link>
           <Link href="/contact" className="btn-outline">
             Get in touch
@@ -68,7 +110,7 @@ export default function Hero() {
         </div>
 
         {/* Award Pills */}
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
           {awardPills.map((pill) => (
             <div
               key={pill.label}
@@ -76,15 +118,14 @@ export default function Hero() {
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '8px',
-                backgroundColor: 'rgba(79,142,247,0.1)',
-                border: '1px solid rgba(79,142,247,0.25)',
-                borderRadius: '9999px',
+                backgroundColor: 'rgba(43,110,219,0.10)',
+                border: '0.5px solid rgba(91,151,255,0.3)',
+                borderRadius: '4px',
                 padding: '6px 14px',
                 fontSize: '0.8125rem',
-                color: 'rgba(245,245,243,0.75)',
+                color: 'var(--jcb-blue-bright)',
               }}
             >
-              <span style={{ color: '#F7B84F' }}>{pill.icon}</span>
               {pill.label}
             </div>
           ))}

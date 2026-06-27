@@ -199,7 +199,7 @@ export default function WorkPageClient() {
           <p className="eyebrow" style={{ color: '#4F8EF7', marginBottom: '16px' }}>Work</p>
           <h1 className="display-lg" style={{ color: '#F5F5F3', margin: '0 0 16px' }}>Selected Work</h1>
           <p className="body-lg" style={{ color: 'rgba(245,245,243,0.55)', maxWidth: '600px', margin: 0 }}>
-            Six documented case studies and campaign work spanning 20+ years &mdash; digital campaigns, live events,
+            Six documented case studies and campaign work spanning 20+ years — digital campaigns, live events,
             brand launches, founder-built platforms, and public sector field operations.
           </p>
         </div>

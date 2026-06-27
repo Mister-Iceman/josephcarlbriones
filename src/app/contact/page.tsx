@@ -1,11 +1,12 @@
 import type { Metadata } from 'next'
+import { Suspense } from 'react'
 import { Download, ExternalLink } from 'lucide-react'
-import ContactForm from '@/components/ui/ContactForm'
+import ContactFormLoader from '@/components/ui/ContactFormLoader'
 
 export const metadata: Metadata = {
   title: 'Contact',
   description:
-    'Get in touch with Joseph Carl Briones \u2014 marketing strategist, community platform founder, and multicultural media professional. Los Angeles-based.',
+    'Get in touch with Joseph Carl R. Briones — marketing strategist, community platform founder, and multicultural media professional. Los Angeles-based.',
 }
 
 export default function ContactPage() {
@@ -21,7 +22,7 @@ export default function ContactPage() {
             Get in touch.
           </h1>
           <p className="body-lg" style={{ color: 'rgba(245,245,243,0.55)', maxWidth: '520px', margin: 0 }}>
-            Whether you&apos;re a recruiter, a brand with a project, or someone who wants to collaborate &mdash; I&apos;d love to
+            Whether you&apos;re a recruiter, a brand with a project, or someone who wants to collaborate — I&apos;d love to
             hear from you.
           </p>
         </div>
@@ -30,7 +31,9 @@ export default function ContactPage() {
       {/* Contact form */}
       <section style={{ padding: '64px 24px', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
         <div style={{ maxWidth: '640px', margin: '0 auto' }}>
-          <ContactForm />
+          <Suspense fallback={null}>
+            <ContactFormLoader />
+          </Suspense>
         </div>
       </section>
 
@@ -63,7 +66,7 @@ export default function ContactPage() {
               }}
             >
               <Download size={16} style={{ color: '#4F8EF7', flexShrink: 0 }} />
-              Download R&eacute;sum&eacute; &mdash; General / Private Sector
+              Download R&eacute;sum&eacute; — General / Private Sector
             </a>
             <a
               href="/downloads/JCB-Resume-Public.pdf"
@@ -83,7 +86,7 @@ export default function ContactPage() {
               }}
             >
               <Download size={16} style={{ color: '#4F8EF7', flexShrink: 0 }} />
-              Download R&eacute;sum&eacute; &mdash; Public Sector / Government
+              Download R&eacute;sum&eacute; — Public Sector / Government
             </a>
           </div>
         </div>

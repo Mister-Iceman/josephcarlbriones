@@ -8,7 +8,7 @@ import AwardsTeaser from '@/components/home/AwardsTeaser'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Joseph Carl Briones \u2014 Marketing Strategist & Community Platform Builder',
+  title: 'Joseph Carl R. Briones — Marketing Strategist & Community Platform Builder',
   description:
     '20+ years building meaningful connections between brands, audiences, and communities. Award-winning marketing strategist, multicultural media professional, and community platform founder. Los Angeles-based.',
 }
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Person',
-  name: 'Joseph Carl Briones',
+  name: 'Joseph Carl R. Briones',
   jobTitle: 'Marketing Strategist & Community Platform Builder',
   url: 'https://josephcarlbriones.com',
   sameAs: [

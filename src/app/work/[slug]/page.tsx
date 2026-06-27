@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!cs) return {}
   return {
     title: cs.title,
-    description: `${cs.category} \u2014 ${cs.client} (${cs.year}). ${cs.demonstrates.slice(0, 140)}...`,
+    description: `${cs.category} — ${cs.client} (${cs.year}). ${cs.demonstrates.slice(0, 140)}...`,
   }
 }
 

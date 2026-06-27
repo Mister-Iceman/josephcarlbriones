@@ -5,27 +5,27 @@ import { CheckCircle2, ArrowRight } from 'lucide-react'
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'Joseph Carl R. Briones \u2014 20+ years in marketing, broadcast media, advertising, and digital platform development. Los Angeles-based. Bilingual English/Tagalog.',
+    'Joseph Carl R. Briones — 20+ years in marketing, broadcast media, advertising, and digital platform development. Los Angeles-based. Bilingual English/Tagalog.',
 }
 
 const timeline = [
   {
-    period: 'June 2024 \u2013 Present',
+    period: 'June 2024 – Present',
     role: 'Freelance Marketing & Technology Consultant',
-    org: 'Founder \u2014 FilipinoFoodNearMe.org & FilipinoEventsNearMe.org',
+    org: 'Founder — FilipinoFoodNearMe.org & FilipinoEventsNearMe.org',
     location: 'Los Angeles, CA',
     notes: null,
     bullets: null,
   },
   {
-    period: 'Oct 2019 \u2013 May 2023',
+    period: 'Oct 2019 – May 2023',
     role: 'Founder | Principal Partner',
     org: 'JCB Strategic Media LLC',
     location: 'Los Angeles, CA',
     notes: null,
     bullets: [
-      'Led integrated campaigns for The Baker\u2019s Son by Valerio\u2019s (brand launch + broadcast), Goldilocks USA (national media buy), and Martin Purefoods (campaign management).',
-      'Served as principal consultant for michaelwernecke.com \u2014 brand architecture, content strategy, and digital presence development.',
+      'Led integrated campaigns for The Baker’s Son by Valerio’s (brand launch + broadcast), Goldilocks USA (national media buy), and Martin Purefoods (campaign management).',
+      'Served as principal consultant for michaelwernecke.com — brand architecture, content strategy, and digital presence development.',
       'Executed digital strategy for Westates Automotive Group, including digital ad placements and regional audience targeting.',
       'Managed media budgets across linear TV, out-of-home, and digital channels for multicultural-focused campaigns.',
       'Leveraged AI-assisted workflows and platform development tools to deliver strategic value at reduced cost vs. traditional agency models.',
@@ -40,7 +40,7 @@ const timeline = [
     bullets: null,
   },
   {
-    period: 'August 2020 \u2013 October 2020',
+    period: 'August 2020 – October 2020',
     role: 'Enumerator',
     org: 'U.S. Census Bureau',
     location: 'Los Angeles, CA',
@@ -48,7 +48,7 @@ const timeline = [
     bullets: null,
   },
   {
-    period: 'May 2009 \u2013 September 2019',
+    period: 'May 2009 – September 2019',
     role: 'Account Executive, Advertising Sales',
     org: 'ABS-CBN International / The Filipino Channel (TFC)',
     location: 'Greater Los Angeles Area',
@@ -61,7 +61,7 @@ const timeline = [
     org: 'Universal McCann, Los Angeles',
     location: 'Greater Los Angeles Area',
     notes:
-      'Clients: Sony Pictures Entertainment \u2014 The House Bunny, Underworld: Rise of the Lycans, Seven Pounds, Pink Panther 2, Lakeview Terrace, Mardi Gras, The International',
+      'Clients: Sony Pictures Entertainment — The House Bunny, Underworld: Rise of the Lycans, Seven Pounds, Pink Panther 2, Lakeview Terrace, Mardi Gras, The International',
     bullets: null,
   },
 ]
@@ -131,7 +131,7 @@ export default function AboutPage() {
             Marketing Strategist &nbsp;&middot;&nbsp; Community Platform Builder &nbsp;&middot;&nbsp; Multicultural Media Professional &nbsp;&middot;&nbsp; Los Angeles, CA
           </p>
           <p className="body-lg" style={{ color: 'rgba(245,245,243,0.65)', maxWidth: '680px', margin: 0 }}>
-            20+ years building meaningful connections between brands, audiences, and communities &mdash; across
+            20+ years building meaningful connections between brands, audiences, and communities — across
             broadcast media, major advertising agencies, and digital platforms. Award-winning. Bilingual. Now
             building the infrastructure for Filipino-American community discovery online.
           </p>
@@ -158,11 +158,11 @@ export default function AboutPage() {
                 The Broadcast Media & Agency Years
               </h3>
               <p className="body-lg" style={{ color: 'rgba(245,245,243,0.6)', margin: 0 }}>
-                My career started in the thick of major advertising \u2014 at Universal McCann Los Angeles, planning and
+                My career started in the thick of major advertising — at Universal McCann Los Angeles, planning and
                 buying media for Sony Pictures Entertainment across seven film releases. From there, a decade at
                 ABS-CBN International / The Filipino Channel shaped everything. Over 10 years as an Account Executive
                 in Advertising Sales, I built campaigns and partnerships for marquee brands including McDonald&apos;s,
-                AT&amp;T, Verizon, Toyota, Walmart, U.S. Bank, Sony Pictures, and Remitly \u2014 connecting them with the
+                AT&amp;T, Verizon, Toyota, Walmart, U.S. Bank, Sony Pictures, and Remitly — connecting them with the
                 4+ million Filipino-Americans who called TFC their cultural home. A 3AF Digital Campaign of the Year
                 award and an MVP Most Outstanding Eventurer award marked the decade&apos;s high points.
               </p>
@@ -181,9 +181,9 @@ export default function AboutPage() {
               </h3>
               <p className="body-lg" style={{ color: 'rgba(245,245,243,0.6)', margin: 0 }}>
                 In 2019, I founded JCB Strategic Media LLC and began serving clients directly as a marketing
-                strategist and media consultant \u2014 leading integrated campaigns for The Baker&apos;s Son by Valerio&apos;s
+                strategist and media consultant — leading integrated campaigns for The Baker&apos;s Son by Valerio&apos;s
                 (brand launch), Goldilocks USA (national media buy), and others. During the COVID-19 pandemic, I
-                took on a public service role as a U.S. Census Bureau Enumerator \u2014 an experience that deepened my
+                took on a public service role as a U.S. Census Bureau Enumerator — an experience that deepened my
                 appreciation for multilingual community outreach, federal compliance, and civic data integrity.
               </p>
             </div>
@@ -200,7 +200,7 @@ export default function AboutPage() {
                 The Builder Chapter
               </h3>
               <p className="body-lg" style={{ color: 'rgba(245,245,243,0.6)', margin: 0 }}>
-                In 2024, I built FilipinoFoodNearMe.org and FilipinoEventsNearMe.org from scratch \u2014 two
+                In 2024, I built FilipinoFoodNearMe.org and FilipinoEventsNearMe.org from scratch — two
                 community platforms now serving 1,239+ business listings and 150+ events across the U.S., using
                 the same Next.js / Vercel / Sentry production stack used by professional engineering teams. I
                 didn&apos;t have a formal CS degree. I had strategy, curiosity, and AI-assisted development workflows.
@@ -465,13 +465,13 @@ export default function AboutPage() {
                 <h3 style={{ fontSize: '0.9375rem', fontWeight: 600, color: '#F5F5F3', margin: 0 }}>
                   michaelwernecke.com
                 </h3>
-                <span style={{ fontSize: '0.8125rem', color: 'rgba(245,245,243,0.35)', whiteSpace: 'nowrap' }}>2022 &ndash; 2023</span>
+                <span style={{ fontSize: '0.8125rem', color: 'rgba(245,245,243,0.35)', whiteSpace: 'nowrap' }}>2022 – 2023</span>
               </div>
               <p style={{ fontSize: '0.8125rem', color: '#4F8EF7', margin: '0 0 8px', fontWeight: 500 }}>
                 Brand Architecture &middot; Content Strategy &middot; Digital Presence
               </p>
               <p className="body-sm" style={{ color: 'rgba(245,245,243,0.55)', margin: '0 0 12px' }}>
-                Principal consultant for Michael Wernecke&apos;s personal brand site &mdash; brand architecture,
+                Principal consultant for Michael Wernecke&apos;s personal brand site — brand architecture,
                 content strategy, and full digital presence development.
               </p>
               <a
@@ -492,7 +492,7 @@ export default function AboutPage() {
               }}
             >
               <p style={{ fontSize: '0.9375rem', fontWeight: 500, color: '#F5F5F3', margin: '0 0 6px' }}>
-                JCB Strategic Media Engagements &mdash; 2019&ndash;2023
+                JCB Strategic Media Engagements — 2019–2023
               </p>
               <p className="body-sm" style={{ color: 'rgba(245,245,243,0.5)', margin: '0 0 12px' }}>
                 Brand launch campaigns, national media buys, and integrated digital campaigns for The Baker&apos;s Son

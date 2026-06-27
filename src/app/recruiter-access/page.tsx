@@ -1,15 +1,17 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Download, ExternalLink, Trophy, CheckCircle2 } from 'lucide-react'
+import RecruiterGate from '@/components/ui/RecruiterGate'
 
 export const metadata: Metadata = {
   title: 'Recruiter Access',
-  description: 'Private recruiter access page for Joseph Carl Briones.',
+  description: 'Private recruiter access page for Joseph Carl R. Briones.',
   robots: { index: false, follow: false },
 }
 
 export default function RecruiterAccessPage() {
   return (
+    <RecruiterGate>
     <div style={{ backgroundColor: '#0A0F1E', minHeight: '100vh' }}>
       {/* Header */}
       <section style={{ padding: '80px 24px 48px', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
@@ -29,10 +31,10 @@ export default function RecruiterAccessPage() {
               marginBottom: '24px',
             }}
           >
-            Recruiter Access &mdash; Private
+            Recruiter Access — Private
           </div>
           <h1 className="display-lg" style={{ color: '#F5F5F3', margin: '0 0 16px' }}>
-            Joseph Carl Briones
+            Joseph Carl R. Briones
           </h1>
           <p
             style={{
@@ -44,7 +46,7 @@ export default function RecruiterAccessPage() {
             Marketing Strategist &nbsp;&middot;&nbsp; Community Platform Builder &nbsp;&middot;&nbsp; Multicultural Media Professional &nbsp;&middot;&nbsp; Los Angeles, CA
           </p>
           <p className="body-lg" style={{ color: 'rgba(245,245,243,0.6)', maxWidth: '600px', margin: 0 }}>
-            20+ years building meaningful connections between brands, audiences, and communities &mdash; across
+            20+ years building meaningful connections between brands, audiences, and communities — across
             broadcast media, major advertising agencies, and digital platforms. Award-winning. Bilingual
             (English/Tagalog). Open to marketing leadership, communications, and community affairs roles.
           </p>
@@ -80,7 +82,7 @@ export default function RecruiterAccessPage() {
               }}
             >
               <Download size={16} style={{ color: '#4F8EF7' }} />
-              R&eacute;sum&eacute; &mdash; General / Private Sector (PDF)
+              R&eacute;sum&eacute; — General / Private Sector (PDF)
             </a>
             <a
               href="/downloads/JCB-Resume-Public.pdf"
@@ -100,7 +102,7 @@ export default function RecruiterAccessPage() {
               }}
             >
               <Download size={16} style={{ color: '#4F8EF7' }} />
-              R&eacute;sum&eacute; &mdash; Public Sector / Government (PDF)
+              R&eacute;sum&eacute; — Public Sector / Government (PDF)
             </a>
           </div>
         </div>
@@ -117,7 +119,7 @@ export default function RecruiterAccessPage() {
               '20+ years marketing, media & advertising',
               '10+ years ABS-CBN International / TFC',
               '3AF Digital Campaign of the Year (2018)',
-              'MVP \u2014 Most Outstanding Eventurer (2016)',
+              'MVP — Most Outstanding Eventurer (2016)',
               'Google IT Support Professional Certificate',
               'U.S. Census Bureau Enumerator (Title 13)',
               'Founder: FilipinoFoodNearMe.org (1,239+ listings)',
@@ -152,11 +154,11 @@ export default function RecruiterAccessPage() {
           </p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
             {[
-              { href: '/work/3af-digital-campaign-of-the-year', label: '3AF Digital Campaign of the Year \u2014 Remitly \u00d7 TFC', award: true },
-              { href: '/work/asap-live-ny-barclays-center', label: 'ASAP Live NY \u2014 Barclays Center (12,000 cap.)', award: true },
-              { href: '/work/the-bakers-son-brand-launch', label: "The Baker\u2019s Son \u2014 Brand Launch (Florida)", award: false },
-              { href: '/work/filipinofoodnearme-platform', label: 'FilipinoFoodNearMe.org \u2014 Platform Founder', award: false },
-              { href: '/work/us-census-bureau-field-operations', label: 'U.S. Census Bureau \u2014 Field Operations (2020)', award: false },
+              { href: '/work/3af-digital-campaign-of-the-year', label: '3AF Digital Campaign of the Year — Remitly × TFC', award: true },
+              { href: '/work/asap-live-ny-barclays-center', label: 'ASAP Live NY — Barclays Center (12,000 cap.)', award: true },
+              { href: '/work/the-bakers-son-brand-launch', label: "The Baker’s Son — Brand Launch (Florida)", award: false },
+              { href: '/work/filipinofoodnearme-platform', label: 'FilipinoFoodNearMe.org — Platform Founder', award: false },
+              { href: '/work/us-census-bureau-field-operations', label: 'U.S. Census Bureau — Field Operations (2020)', award: false },
             ].map((item) => (
               <Link
                 key={item.href}
@@ -174,7 +176,7 @@ export default function RecruiterAccessPage() {
                   fontSize: '0.9rem',
                 }}
               >
-                {item.award && <Trophy size={14} style={{ color: '#F7B84F', flexShrink: 0 }} />}
+                {item.award && <Trophy size={14} style={{ color: 'var(--jcb-blue-bright)', flexShrink: 0 }} />}
                 {item.label}
               </Link>
             ))}
@@ -231,5 +233,6 @@ export default function RecruiterAccessPage() {
         </div>
       </section>
     </div>
+    </RecruiterGate>
   )
 }

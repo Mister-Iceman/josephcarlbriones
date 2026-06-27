@@ -36,7 +36,7 @@ export const ventures: Venture[] = [
     name: 'FilipinoEventsNearMe.org',
     tagline: 'The Community-Powered National Filipino Events Calendar',
     description:
-      'Gather. Celebrate. Belong. From barrio fiestas to Simbang Gabi \u2014 the go-to discovery platform for Filipino-American events and cultural gatherings nationwide.',
+      'Gather. Celebrate. Belong. From barrio fiestas to Simbang Gabi — the go-to discovery platform for Filipino-American events and cultural gatherings nationwide.',
     url: 'https://filipinoeventsnearme.org',
     stats: [
       { value: '150+', label: 'Events' },

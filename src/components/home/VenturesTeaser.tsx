@@ -22,7 +22,7 @@ export default function VenturesTeaser() {
             Founder & Builder
           </h2>
           <p className="body-lg" style={{ color: 'rgba(245,245,243,0.55)', margin: 0 }}>
-            Community-driven platforms serving Filipino-Americans nationwide &mdash; designed, built, and launched
+            Community-driven platforms serving Filipino-Americans nationwide — designed, built, and launched
             from scratch using modern web technology.
           </p>
         </div>

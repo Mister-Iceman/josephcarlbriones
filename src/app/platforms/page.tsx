@@ -6,7 +6,7 @@ import SitePreview from '@/components/SitePreview'
 export const metadata: Metadata = {
   title: 'Platforms & Digital Products',
   description:
-    'The FilAm Network \u2014 FilipinoFoodNearMe.org and FilipinoEventsNearMe.org. Community-driven digital platforms serving Filipino-Americans nationwide, founded and built by Joseph Carl R. Briones.',
+    'The FilAm Network — FilipinoFoodNearMe.org and FilipinoEventsNearMe.org. Community-driven digital platforms serving Filipino-Americans nationwide, founded and built by Joseph Carl R. Briones.',
 }
 
 export default function PlatformsPage() {
@@ -44,7 +44,7 @@ export default function PlatformsPage() {
       >
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
           <p className="body-lg" style={{ color: 'rgba(245,245,243,0.65)', margin: 0, lineHeight: 1.8 }}>
-            FilipinoFoodNearMe.org and FilipinoEventsNearMe.org are not side projects. They are proof &mdash;
+            FilipinoFoodNearMe.org and FilipinoEventsNearMe.org are not side projects. They are proof —
             that strategy, marketing, community insight, and modern technology can work together to build
             something people genuinely use.
           </p>
@@ -74,7 +74,7 @@ export default function PlatformsPage() {
               {/* Left: info */}
               <div>
                 <p className="eyebrow" style={{ color: 'rgba(245,245,243,0.35)', marginBottom: '12px' }}>
-                  {v.year} &mdash; Present
+                  {v.year} — Present
                 </p>
                 <h2 className="display-md" style={{ color: '#F5F5F3', margin: '0 0 8px' }}>
                   {v.name}
@@ -189,7 +189,7 @@ export default function PlatformsPage() {
             {/* Left: info */}
             <div>
               <p className="eyebrow" style={{ color: 'rgba(245,245,243,0.35)', marginBottom: '12px' }}>
-                2022 &ndash; 2023 &middot; Consulting Client
+                2022 – 2023 &middot; Consulting Client
               </p>
               <h2 style={{ fontSize: '1.25rem', fontWeight: 500, color: '#F5F5F3', margin: '0 0 6px', fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
                 michaelwernecke.com
@@ -198,7 +198,7 @@ export default function PlatformsPage() {
                 Personal Brand Platform &middot; Consulting Client Site
               </p>
               <p className="body-lg" style={{ color: 'rgba(245,245,243,0.6)', margin: '0 0 20px' }}>
-                Served as principal consultant for Michael Wernecke&apos;s personal brand site &mdash; delivering brand
+                Served as principal consultant for Michael Wernecke&apos;s personal brand site — delivering brand
                 architecture, content strategy, and full digital presence development under JCB Strategic Media LLC.
               </p>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
@@ -246,7 +246,7 @@ export default function PlatformsPage() {
           </p>
           <p className="body-lg" style={{ color: 'rgba(245,245,243,0.65)', margin: 0, lineHeight: 1.8 }}>
             These platforms represent the convergence of every skill developed over 20+ years: audience
-            understanding, content strategy, SEO, brand development, community engagement, and now &mdash;
+            understanding, content strategy, SEO, brand development, community engagement, and now —
             full-stack digital product development. Built without formal engineering training. Shipped to
             production. Growing every week.
           </p>

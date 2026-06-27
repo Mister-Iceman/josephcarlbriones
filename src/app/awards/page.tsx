@@ -6,7 +6,7 @@ import { awards, certifications } from '@/data/awards'
 export const metadata: Metadata = {
   title: 'Awards & Certifications',
   description:
-    'Industry awards, professional certifications, and academic credentials for Joseph Carl Briones \u2014 marketing strategist and community platform founder.',
+    'Industry awards, professional certifications, and academic credentials for Joseph Carl R. Briones — marketing strategist and community platform founder.',
 }
 
 export default function AwardsPage() {
@@ -50,15 +50,15 @@ export default function AwardsPage() {
                   style={{
                     width: '44px',
                     height: '44px',
-                    borderRadius: '10px',
-                    backgroundColor: award.featured ? 'rgba(247,184,79,0.15)' : 'rgba(255,255,255,0.04)',
+                    borderRadius: '4px',
+                    backgroundColor: 'rgba(43,110,219,0.12)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     flexShrink: 0,
                   }}
                 >
-                  <Trophy size={18} style={{ color: award.featured ? '#F7B84F' : 'rgba(245,245,243,0.3)' }} />
+                  <Trophy size={18} style={{ color: 'var(--jcb-blue-bright)' }} />
                 </div>
 
                 {/* Content */}
@@ -95,9 +95,23 @@ export default function AwardsPage() {
                   <p style={{ fontSize: '0.8125rem', color: '#4F8EF7', margin: '0 0 10px', fontWeight: 500 }}>
                     {award.issuer}
                   </p>
-                  <p className="body-sm" style={{ color: 'rgba(245,245,243,0.55)', margin: '0 0 12px' }}>
+                  <p className="body-sm" style={{ color: 'rgba(245,245,243,0.55)', margin: '0 0 10px' }}>
                     {award.description}
                   </p>
+                  {award.roleContext && (
+                    <p style={{ fontSize: '0.8125rem', color: 'rgba(245,245,243,0.38)', margin: '0 0 8px', fontStyle: 'italic' }}>
+                      {award.roleContext}
+                    </p>
+                  )}
+                  {award.campaigns && award.campaigns.length > 0 && (
+                    <ul style={{ margin: '0 0 10px', padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '3px' }}>
+                      {award.campaigns.map((campaign, j) => (
+                        <li key={j} style={{ fontSize: '0.8125rem', color: 'rgba(245,245,243,0.45)', lineHeight: 1.5 }}>
+                          — {campaign}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                   {award.linkedCaseStudy && (
                     <Link
                       href={`/work/${award.linkedCaseStudy}`}
@@ -170,16 +184,13 @@ export default function AwardsPage() {
               className="jcb-card"
               style={{ padding: '24px', display: 'flex', gap: '16px', alignItems: 'flex-start' }}
             >
-              <GraduationCap size={18} style={{ color: '#4F8EF7', flexShrink: 0, marginTop: '2px' }} />
+              <GraduationCap size={18} style={{ color: 'var(--jcb-blue-bright)', flexShrink: 0, marginTop: '2px' }} />
               <div>
-                <h3 style={{ fontSize: '0.9375rem', fontWeight: 500, color: '#F5F5F3', margin: '0 0 4px' }}>
-                  San Beda University
+                <h3 style={{ fontSize: '0.9375rem', fontWeight: 500, color: 'var(--jcb-white)', margin: '0 0 4px' }}>
+                  San Beda University &middot; Manila, Philippines
                 </h3>
-                <p style={{ fontSize: '0.8125rem', color: '#4F8EF7', margin: '0 0 6px' }}>
-                  Bachelor&apos;s Degree in Management
-                </p>
-                <p className="body-sm" style={{ color: 'rgba(245,245,243,0.5)', margin: 0 }}>
-                  Philippines
+                <p style={{ fontSize: '0.8125rem', color: 'var(--jcb-blue-bright)', margin: '0 0 6px' }}>
+                  Bachelor of Science in Management &middot; 1996
                 </p>
               </div>
             </div>
@@ -190,7 +201,7 @@ export default function AwardsPage() {
                 className="jcb-card"
                 style={{ padding: '24px', display: 'flex', gap: '16px', alignItems: 'flex-start' }}
               >
-                <CheckCircle2 size={18} style={{ color: '#F7B84F', flexShrink: 0, marginTop: '2px' }} />
+                <CheckCircle2 size={18} style={{ color: 'var(--jcb-blue-bright)', flexShrink: 0, marginTop: '2px' }} />
                 <div>
                   <h3 style={{ fontSize: '0.9375rem', fontWeight: 500, color: '#F5F5F3', margin: '0 0 4px' }}>
                     {cert.title}
