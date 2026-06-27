@@ -129,6 +129,25 @@ export default async function CaseStudyPage({ params }: Props) {
               </span>
             ))}
           </div>
+
+          {/* PDF download — only shown when pdfPath is set */}
+          {cs.pdfPath && (
+            <div className="cs-pdf-download">
+              <a href={cs.pdfPath} download className="cs-pdf-btn">
+                <span aria-hidden="true">↓</span> Download Original Case Study
+                <span className="sr-only">(PDF)</span>
+              </a>
+              <a
+                href={cs.pdfPath}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cs-pdf-btn cs-pdf-btn--view"
+              >
+                <span aria-hidden="true">↗</span> View PDF
+                <span className="sr-only">(opens in new tab)</span>
+              </a>
+            </div>
+          )}
         </div>
       </section>
 

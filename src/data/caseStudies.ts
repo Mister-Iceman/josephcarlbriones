@@ -21,12 +21,13 @@ export interface CaseStudy {
   result: string
   demonstrates: string
   role?: string
+  pdfPath?: string
 }
 
 export const caseStudies: CaseStudy[] = [
   {
     slug: '3af-digital-campaign-of-the-year',
-    title: '3AF Digital Campaign of the Year',
+    title: '3AF Digital Campaign of the Year \u2014 Remitly \u00d7 TFC',
     client: 'Remitly \u00d7 The Filipino Channel (TFC)',
     category: 'Digital Campaign \u00b7 Partnership Marketing',
     year: '2018',
@@ -42,15 +43,17 @@ export const caseStudies: CaseStudy[] = [
       { value: '#1', label: '3AF Digital Campaign of the Year' },
     ],
     situation:
-      'For Overseas Filipinos (OFs), staying connected to the Philippines is essential \u2014 especially during the Christmas season. The Filipino Channel (TFC) serves as their gateway to cultural content, while Remitly is a leader in digital money remittance. Both organizations share a mission: connecting Filipinos worldwide with their families back home.',
-    task: "Create a meaningful, culturally resonant digital campaign that engaged Overseas Filipinos through familiar holiday traditions while effectively positioning Remitly's brand and driving measurable site traffic and conversions during the peak December remittance season.",
+      'For Filipino overseas workers, Christmas is the most emotionally charged time of year \u2014 homesickness peaks, remittance sending spikes, and connection to family back home becomes urgent. The Filipino Channel (TFC), the global network for Filipinos worldwide, and Remitly, a leading digital remittance platform, identified a shared mission: connect Filipinos anywhere in the world with their loved ones back home. The question was how to do it in a way that felt culturally authentic rather than transactional.',
+    task:
+      'Co-developed with TFC Ad Sales Director Ricky Resurreccion, the campaign concept was pitched to Remitly as a first-of-its-kind branded digital caroling experience \u2014 \u201cNamamasko Po!\u201d \u2014 The Kapamilya Christmas Carols. Rather than a standard sponsorship placement, this was a cultural event: 12 consecutive days of live caroling performances broadcast on Facebook Live and TFC.tv, featuring Remitly Ambassadors and TFC celebrities delivering holiday entertainment to Filipino communities worldwide. Campaign visuals and merchandise were designed around Remitly brand colors for subtle but consistent sponsor presence. All digital content included clickable, trackable links directly to Remitly promotional pages.',
     action:
-      "Developed and executed a groundbreaking global Christmas caroling campaign spanning 12 days \u2014 sharing Filipino holiday traditions worldwide. Featured Remitly Ambassadors alongside TFC celebrities. Created fresh digital content with clickable, trackable links. Designed campaign visuals around Remitly's brand colors for subtle but consistent sponsorship reinforcement.",
+      'Managed as Team Lead and Project Coordinator across U.S. and Philippines teams. Coordinated between Remitly (U.S. client), the TFC U.S. sales team, and the TFC Manila production team who executed all creative, talent, and broadcast production. 12-day broadcast schedule across U.S. & Canada (West Coast 4PM / East Coast 7PM), UK (12MN), Australia (11AM), and Manila (8AM) \u2014 simultaneous global reach across 4 time zones. All content distributed on Facebook Live and TFC.tv with embedded Remitly promotional links.',
     result:
-      'The campaign achieved record December targets for Remitly, drove a 30% increase in site visits, and generated thousands of direct promo site visits. TFC reached over 500,000 viewers globally across North America, the Middle East, Asia, and Europe. Thousands of positive comments on Facebook from Filipinos worldwide \u2014 and a 3AF Digital Campaign of the Year award.',
+      'Half a million viewers reached globally across North America, the Middle East, Asia, and Europe, with thousands tuning in daily throughout the 12-day campaign. For Remitly: hundreds of Facebook comments expressing brand gratitude and pride, a 30% increase in site traffic immediately following campaign launch, thousands of direct promotional site visits, and record December revenue targets achieved. For TFC audiences: thousands of appreciative comments from Filipinos worldwide. Won the 2018 Digital Campaign of the Year from the Asian-American Advertising Federation (3AF) \u2014 the premier recognition in Asian-American advertising.',
     demonstrates:
-      'Strategic cross-brand partnership development, culturally resonant content creation, measurable digital campaign execution, and multinational audience engagement \u2014 demonstrating both creative and analytical marketing capability applicable to any multicultural or community-facing communications program.',
+      'This campaign demonstrates the ability to conceive a novel partnership format, sell it to a major brand client, and then execute it at global scale across four time zones and two production teams on opposite sides of the Pacific. The 30% Remitly traffic lift and record December targets are hard commercial outcomes. The 3AF award confirms industry recognition of the campaign\u2019s innovation. For government evaluators: this is multicultural community outreach with documented audience impact across North America, the Middle East, Asia, and Europe. For private-sector evaluators: this is partnership development, campaign innovation, and measurable ROI at global scale.',
     role: 'Account Executive and Team Lead, ABS-CBN International / The Filipino Channel. Co-conceived the campaign partnership with Ad Sales Director Ricky Resurreccion and pitched it to Remitly as a first-of-its-kind branded digital caroling partnership. Served as Team Lead and Project Manager throughout execution \u2014 coordinating between the U.S. client (Remitly), the TFC U.S. sales team, and the TFC Manila production team. Responsible for client relationship management, sponsorship delivery, cross-regional team coordination, and campaign performance oversight. Content production was executed by the TFC Manila creative and production team.',
+    pdfPath: '/pdfs/3AF-Digital-Campaign-of-the-Year.pdf',
   },
   {
     slug: 'asap-live-ny-barclays-center',
@@ -70,14 +73,16 @@ export const caseStudies: CaseStudy[] = [
       { value: 'MVP', label: 'Most Outstanding Eventurer award' },
     ],
     situation:
-      'ASAP (A Sunday Afternoon Party) is the most popular variety show in the Philippines, featuring 40+ top-tier celebrities from ABS-CBN. In 2016, TFC brought this grand live event to Barclays Center in New York to engage millions of Filipino-Americans \u2014 one of the largest Filipino-American live entertainment events ever staged on the East Coast.',
-    task: 'As Head of Sponsorship and Ad Sales Logistics, manage high demand from U.S. and Philippine advertisers across diverse business sizes and product categories, coordinate inter-regional logistics between U.S. and Philippine teams, create a grand pre-show on-stage brand experience, and meet ambitious sales targets for a sold-out 12,000-capacity event.',
+      "A Sunday Afternoon Party (ASAP) is the Philippines\u2019 most popular variety show, featuring 40+ top-tier ABS-CBN celebrities. In 2016, The Filipino Channel brought this landmark live event to Barclays Center in New York \u2014 one of the largest and most prestigious entertainment venues in the United States \u2014 to engage the millions of Filipino-Americans on the East Coast. The event, branded \u201cASAP New York Invasion,\u201d was a sold-out tent-pole cultural moment for the Filipino-American community.",
+    task:
+      'Build a sponsorship architecture broad enough to accommodate advertisers from Fortune 500 brands down to local Filipino-American businesses, while delivering premium on-stage experiences for flagship sponsors. Create a grand pre-show brand activation to generate audience energy and maximize sponsor visibility before the main event. Exceed ambitious revenue targets in a competitive live event market.',
     action:
-      'Established clearly structured sponsorship tiers to accommodate advertisers of all sizes. Managed effective inter-regional communication and coordination between U.S. and Philippines teams. Strategized, conceptualized, and executed the pre-show on-stage brand experience in collaboration with creative, production, and account teams. Spearheaded detailed logistical operations for on-site brand engagements and activations. Led creative sales packaging and direct salesmanship efforts.',
+      'As Head of Sponsorship and Ad Sales Logistics: established clearly structured sponsorship tiers (Platinum, Gold, Silver, Bronze, Community Partner, Custom) to accommodate the full range of U.S. and Philippine advertisers. Led inter-regional coordination between U.S. and Philippines teams across all planning and logistical requirements. Strategized, conceptualized, and executed the grand pre-show on-stage brand experience in collaboration with internal creative, production, and account teams. Spearheaded all on-site logistical operations for brand engagements and activations on event day. Led all creative sales packaging and salesmanship efforts.',
     result:
-      'Advertisers across different sizes and product categories successfully participated in the grand event. The inter-regional U.S.\u2013Philippines team collaboration became a benchmark for future similar projects. The on-stage pre-show and on-site brand engagements were recognized as best practice for future events. Sales targets were exceeded for the sold-out 12,000-capacity event at Barclays Center. Recognized with the MVP Most Outstanding Eventurer award.',
+      'Barclays Center sold out \u2014 12,000 Filipino-Americans. Exceeded ambitious sales targets. Advertisers across diverse sizes and product categories successfully participated in the event. The inter-regional U.S.\u2013Philippines team working relationship established during this project became a benchmark for all subsequent similar projects. The on-stage pre-show and on-site brand engagement model was recognized as a best-in-class standard for future TFC events. Awarded MVP \u2014 Most Outstanding Eventurer by TFC / ABS-CBN International leadership.',
     demonstrates:
       'Large-scale event logistics and operations management, cross-regional multi-stakeholder coordination, sponsorship architecture and sales execution, and the ability to deliver under high-stakes, high-visibility pressure \u2014 directly transferable to public agency event programming, major institutional communications, and enterprise-level marketing operations.',
+    pdfPath: '/pdfs/ASAP-Live-New-York-MVP.pdf',
   },
   {
     slug: 'the-bakers-son-brand-launch',
@@ -105,6 +110,7 @@ export const caseStudies: CaseStudy[] = [
       'Overwhelming acceptance and high-volume sales \u2014 products literally off the shelves for three weeks straight, a level of demand only previously seen during Jollibee U.S. store openings. Filipino-Americans felt proud and honored. Customers drove up to 250 miles to visit. Long lines with several hours of wait time. Major social media buzz influencing non-Filipinos to try the products. Expansion plans triggered directly by the success of the launch.',
     demonstrates:
       'End-to-end integrated brand launch management \u2014 from strategy and creative direction to multi-platform media execution and measurable market penetration. Demonstrates the ability to connect deeply with multicultural audiences while simultaneously reaching mainstream consumers, producing real, quantifiable business outcomes from a standing start.',
+    pdfPath: '/pdfs/JCBSM-Case-Study-The-Bakers-Son.pdf',
   },
   {
     slug: 'goldilocks-usa-media-campaign',

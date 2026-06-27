@@ -463,9 +463,12 @@
 }
 
 .cs-gallery__img {
-  mix-blend-mode: luminosity;
-  opacity: 0.88;
-  transition: opacity 200ms ease;
+  mix-blend-mode: normal;
+  opacity: 1;
+  transition: transform 200ms ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -473,8 +476,7 @@
 }
 
 .cs-gallery__item:hover .cs-gallery__img {
-  opacity: 1;
-  mix-blend-mode: normal;
+  transform: scale(1.03);
 }
 
 .cs-gallery__caption {
@@ -1368,6 +1370,40 @@
   font: inherit;
   padding: 0;
   width: 100%;
+}
+
+/* ── PDF case study download buttons ─────────────────────────────────────── */
+.cs-pdf-download {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.cs-pdf-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  background: var(--jcb-surface2);
+  color: var(--jcb-gray-200);
+  border: 0.5px solid rgba(255,255,255,0.12);
+  transition: background 150ms ease;
+}
+
+.cs-pdf-btn:hover {
+  background: var(--jcb-surface3, #1E2E4A);
+  color: var(--jcb-white);
+}
+
+.cs-pdf-btn:focus-visible {
+  outline: 2px solid var(--jcb-blue);
+  outline-offset: 2px;
 }
 
 /* External-link badge on gallery images (e.g. Facebook post links) */
