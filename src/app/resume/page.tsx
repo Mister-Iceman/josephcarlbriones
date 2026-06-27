@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { certifications } from '@/data/siteData'
 
 export const metadata: Metadata = {
   title: 'Résumé — Joseph Carl R. Briones',
@@ -170,20 +171,13 @@ export default function ResumePage() {
             Certifications & Education
           </p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-            {[
-              { title: 'Google IT Support Professional Certificate', org: 'Google / Coursera', year: '2024' },
-              { title: 'Cybersecurity: Sound the Alarm — Detection and Response', org: 'Google / Coursera', year: '2024' },
-              { title: 'Cybersecurity: Play It Safe — Manage Security Risks', org: 'Google / Coursera', year: '2024' },
-              { title: 'Office 365 for IT Support', org: 'Microsoft / Coursera', year: '2024' },
-              { title: 'WES International Academic Credential Evaluation', org: 'World Education Services — Ref #6631434/lwd', year: 'Nov 2024' },
-              { title: 'Bachelor of Science in Management', org: 'San Beda University · Manila, Philippines', year: '1996' },
-            ].map((item) => (
-              <div key={item.title} style={{ display: 'flex', justifyContent: 'space-between', gap: '12px', flexWrap: 'wrap' }}>
+            {certifications.map((cert) => (
+              <div key={cert.title} style={{ display: 'flex', justifyContent: 'space-between', gap: '12px', flexWrap: 'wrap' }}>
                 <div>
-                  <span style={{ fontSize: '0.875rem', fontWeight: 500, color: 'rgba(245,245,243,0.8)' }}>{item.title}</span>
-                  <span style={{ fontSize: '0.8125rem', color: 'rgba(245,245,243,0.4)', marginLeft: '8px' }}>— {item.org}</span>
+                  <span style={{ fontSize: '0.875rem', fontWeight: 500, color: 'rgba(245,245,243,0.8)' }}>{cert.title}</span>
+                  <span style={{ fontSize: '0.8125rem', color: 'rgba(245,245,243,0.4)', marginLeft: '8px' }}>— {cert.issuer}</span>
                 </div>
-                <span style={{ fontSize: '0.8125rem', color: 'rgba(245,245,243,0.3)', whiteSpace: 'nowrap' }}>{item.year}</span>
+                <span style={{ fontSize: '0.8125rem', color: 'rgba(245,245,243,0.3)', whiteSpace: 'nowrap' }}>{cert.year}</span>
               </div>
             ))}
           </div>

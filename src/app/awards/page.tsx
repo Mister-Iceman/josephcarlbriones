@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { Trophy, CheckCircle2, ArrowRight, GraduationCap } from 'lucide-react'
-import { awards, certifications } from '@/data/awards'
+import { Trophy, ArrowRight, GraduationCap } from 'lucide-react'
+import { awards } from '@/data/awards'
+import { certifications } from '@/data/siteData'
 
 export const metadata: Metadata = {
   title: 'Awards & Certifications',
@@ -138,35 +139,44 @@ export default function AwardsPage() {
       <section style={{ padding: '64px 24px', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
           <p className="eyebrow" style={{ color: '#4F8EF7', marginBottom: '32px' }}>
-            Certifications
+            Professional Certifications
           </p>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-            {certifications.filter((c) => c.type === 'certification').map((cert) => (
-              <div
-                key={cert.id}
-                className="jcb-card"
-                style={{
-                  padding: '20px 24px',
-                  display: 'flex',
-                  gap: '16px',
-                  alignItems: 'flex-start',
-                }}
-              >
-                <CheckCircle2
-                  size={18}
-                  style={{ color: '#4F8EF7', flexShrink: 0, marginTop: '2px' }}
-                />
-                <div>
-                  <h3 style={{ fontSize: '0.9375rem', fontWeight: 500, color: '#F5F5F3', margin: '0 0 4px' }}>
-                    {cert.title}
-                  </h3>
-                  <p style={{ fontSize: '0.8125rem', color: '#4F8EF7', margin: '0 0 6px' }}>
-                    {cert.issuer} &middot; {cert.year}
-                  </p>
-                  <p className="body-sm" style={{ color: 'rgba(245,245,243,0.5)', margin: 0 }}>
-                    {cert.description}
-                  </p>
+
+          {/* Highlighted certs — card grid */}
+          <div className="cert-grid">
+            {certifications.filter((c) => c.highlight).map((cert) => {
+              let badgeClass = 'cert-card__badge--default'
+              let badgeLetter = cert.issuer.charAt(0)
+              if (cert.issuer.includes('Google')) {
+                badgeClass = 'cert-card__badge--google'
+                badgeLetter = 'G'
+              } else if (cert.issuer === 'Meta') {
+                badgeClass = 'cert-card__badge--meta'
+                badgeLetter = 'M'
+              } else if (cert.issuer === 'Udemy') {
+                badgeClass = 'cert-card__badge--udemy'
+                badgeLetter = 'U'
+              } else if (cert.issuer.includes('Coursera')) {
+                badgeClass = 'cert-card__badge--coursera'
+                badgeLetter = 'C'
+              }
+              return (
+                <div key={cert.title} className="cert-card">
+                  <div className={`cert-card__badge ${badgeClass}`}>{badgeLetter}</div>
+                  <p className="cert-card__category">{cert.category}</p>
+                  <h3 className="cert-card__title">{cert.title}</h3>
+                  <p className="cert-card__issuer">{cert.issuer} · {cert.year}</p>
                 </div>
+              )
+            })}
+          </div>
+
+          {/* Other certs — simple list */}
+          <div className="cert-list">
+            {certifications.filter((c) => !c.highlight).map((cert) => (
+              <div key={cert.title} className="cert-list-item">
+                <span className="cert-list-item__title">{cert.title}</span>
+                <span className="cert-list-item__meta">{cert.issuer} · {cert.year}</span>
               </div>
             ))}
           </div>
@@ -195,26 +205,6 @@ export default function AwardsPage() {
               </div>
             </div>
 
-            {certifications.filter((c) => c.type === 'education-verification').map((cert) => (
-              <div
-                key={cert.id}
-                className="jcb-card"
-                style={{ padding: '24px', display: 'flex', gap: '16px', alignItems: 'flex-start' }}
-              >
-                <CheckCircle2 size={18} style={{ color: 'var(--jcb-blue-bright)', flexShrink: 0, marginTop: '2px' }} />
-                <div>
-                  <h3 style={{ fontSize: '0.9375rem', fontWeight: 500, color: '#F5F5F3', margin: '0 0 4px' }}>
-                    {cert.title}
-                  </h3>
-                  <p style={{ fontSize: '0.8125rem', color: '#4F8EF7', margin: '0 0 6px' }}>
-                    {cert.issuer} &middot; {cert.year}
-                  </p>
-                  <p className="body-sm" style={{ color: 'rgba(245,245,243,0.5)', margin: 0 }}>
-                    {cert.description}
-                  </p>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>

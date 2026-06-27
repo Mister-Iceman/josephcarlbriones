@@ -1541,3 +1541,113 @@
   border-radius: 2px;
   pointer-events: none;
 }
+
+/* ── Certification cards & list ── */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.cert-card {
+  background: var(--grad-card);
+  border: 0.5px solid rgba(91,151,255,0.15);
+  border-radius: 8px;
+  padding: 1rem 1.125rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cert-card__badge {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.cert-card__badge--google {
+  background: rgba(66,133,244,0.15);
+  color: #4285F4;
+  border: 0.5px solid rgba(66,133,244,0.3);
+}
+
+.cert-card__badge--meta {
+  background: rgba(0,104,255,0.15);
+  color: #0068FF;
+  border: 0.5px solid rgba(0,104,255,0.3);
+}
+
+.cert-card__badge--udemy {
+  background: rgba(164,69,237,0.15);
+  color: #A445ED;
+  border: 0.5px solid rgba(164,69,237,0.3);
+}
+
+.cert-card__badge--coursera {
+  background: rgba(0,86,210,0.15);
+  color: #0056D2;
+  border: 0.5px solid rgba(0,86,210,0.3);
+}
+
+.cert-card__badge--default {
+  background: rgba(255,255,255,0.05);
+  color: var(--jcb-gray-400);
+  border: 0.5px solid rgba(255,255,255,0.1);
+}
+
+.cert-card__category {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--jcb-blue-bright);
+}
+
+.cert-card__title {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--jcb-white);
+  line-height: 1.4;
+}
+
+.cert-card__issuer {
+  font-size: 12px;
+  color: var(--jcb-gray-400);
+}
+
+.cert-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.cert-list-item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 10px 0;
+  border-bottom: 0.5px solid var(--jcb-border);
+}
+
+.cert-list-item:last-child {
+  border-bottom: none;
+}
+
+.cert-list-item__title {
+  font-size: 13px;
+  color: var(--jcb-white);
+  flex: 1;
+}
+
+.cert-list-item__meta {
+  font-size: 12px;
+  color: var(--jcb-gray-400);
+  white-space: nowrap;
+}
